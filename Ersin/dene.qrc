@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/login.jpg</file>
+    <file>images/zemin_buyuk.jpg</file>
+    <file>images/zemin-kucuk.jpg</file>
+  </qresource>
+</RCC>

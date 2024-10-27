@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>340</y>
+      <width>800</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+background-image: url(:/testx/Users/Windows 10/Downloads/zemin-kucuk.jpg);
+width:800px;
+height:600px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="Basvurular">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>350</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#05a90c; font-size:12pt; color:white</string>
+     </property>
+     <property name="text">
+      <string>BAŞVURULAR</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Mentor">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>350</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#4d0094; font-size:12pt; color:white</string>
+     </property>
+     <property name="text">
+      <string>MENTÖR GÖRÜŞMESİ</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>540</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#800000; font-size:12pt; color:white</string>
+     </property>
+     <property name="text">
+      <string>KAPAT</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Adminmenu">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>280</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#7d003b; font-size:12pt; color:white</string>
+     </property>
+     <property name="text">
+      <string>ADMIN MENÜ</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Anamenu">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>280</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#363636; font-size:12pt; color:white</string>
+     </property>
+     <property name="text">
+      <string>ANA MENÜ</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame
+{
+	background-image: url(:/images/images/zemin_buyuk.jpg);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>70</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:white;
+font-size:36px;
+font-weight:bold;
+background:none
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Mentor Interview</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>800</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+color:black;
+background:#d3d3d3;
+opacity: 0.5;
+font-weight:bold;
+}</string>
+     </property>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+      </property>
+      <property name="text">
+       <string>BUL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+color:black;
+background:white;
+font-weight:bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>ARANACAK METNİ GİRİNİZ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>10</y>
+        <width>201</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+      </property>
+      <property name="text">
+       <string>TÜM GÖRÜŞMELER</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>170</y>
+       <width>281</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+color:black;
+background:white;
+font-weight:bold;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Vıt Projesinin Tamamına Katılması Uygun Olur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VIT Projesi ilk IT Eğtimi Al... ya Yönlendirilmesi Uygun Olur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VIT Projesi İngilizce Eğtimi Al... ya Yönlendirilmesi Uygun Olur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Vit Pojesi Kapsamında Dir.. Yönlendirilmesi Uygun Olur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Direkt Bireysel Koçluk İle İşe Yönlendirilmesi Uygun Olur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bir Sonraki VIT Projesine Katılması Daha Uygun Olur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Başka Bir Sektöre Yönlendirilmesi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Diğer</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>200</y>
+       <width>800</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView{
+color:black;
+background:white;
+font-weight:bold;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>545</y>
+       <width>75</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+color:white;
+background:red;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+     </property>
+     <property name="text">
+      <string>KAPAT</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>91</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+color:black;
+background:white;
+border-radius:10px;
+font-weight:bold;
+}
+QPushButton::hover{
+color:white;
+background:#47545a;
+border-radius:10px;
+font-weight:bold
+}</string>
+     </property>
+     <property name="text">
+      <string>TERCİHLER</string>
+     </property>
+    </widget>
+    <zorder>widget</zorder>
+    <zorder>label</zorder>
+    <zorder>comboBox</zorder>
+    <zorder>tableView</zorder>
+    <zorder>pushButton_4</zorder>
+    <zorder>pushButton_5</zorder>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="dene.qrc"/>
+ </resources>
+ <connections/>
+</ui>
