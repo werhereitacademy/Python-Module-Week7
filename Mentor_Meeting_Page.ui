@@ -7,8 +7,26 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>646</height>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -36,7 +54,7 @@
      <property name="geometry">
       <rect>
        <x>340</x>
-       <y>130</y>
+       <y>110</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -71,7 +89,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>340</x>
-       <y>200</y>
+       <y>180</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -106,7 +124,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>130</y>
+       <y>110</y>
        <width>291</width>
        <height>51</height>
       </rect>
@@ -141,7 +159,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>200</y>
+       <y>180</y>
        <width>291</width>
        <height>51</height>
       </rect>
@@ -176,7 +194,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>500</x>
-       <y>130</y>
+       <y>110</y>
        <width>461</width>
        <height>51</height>
       </rect>
@@ -215,7 +233,7 @@ QLineEdit:placeholder {
      <property name="geometry">
       <rect>
        <x>500</x>
-       <y>210</y>
+       <y>190</y>
        <width>461</width>
        <height>41</height>
       </rect>
@@ -287,7 +305,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>280</y>
+       <y>260</y>
        <width>971</width>
        <height>301</height>
       </rect>
@@ -349,7 +367,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>40</y>
+       <y>20</y>
        <width>381</width>
        <height>51</height>
       </rect>
@@ -363,16 +381,6 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1000</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
