@@ -30,7 +30,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_search.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("C:\\Users\\Admin\\Downloads\\VIT_PROJE\\VIT_HOMEWORKS\\WEEK7\\Python-Module-Week7_Team1\\search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_search.setIcon(icon)
         self.pushButton_search.setObjectName("pushButton_search")
         self.pushButton_defined = QtWidgets.QPushButton(parent=Dialog)
@@ -46,14 +46,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_defined.setObjectName("pushButton_defined")
         self.pushButton_unidentified = QtWidgets.QPushButton(parent=Dialog)
@@ -69,14 +65,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_unidentified.setObjectName("pushButton_unidentified")
         self.lineEdit_search = QtWidgets.QLineEdit(parent=Dialog)
@@ -110,14 +102,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_previous_control.setObjectName("pushButton_previous_control")
         self.pushButton_appfiltered = QtWidgets.QPushButton(parent=Dialog)
@@ -133,14 +121,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_appfiltered.setObjectName("pushButton_appfiltered")
         self.pushButton_dublicatereg = QtWidgets.QPushButton(parent=Dialog)
@@ -156,14 +140,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_dublicatereg.setObjectName("pushButton_dublicatereg")
         self.pushButton_differentreg = QtWidgets.QPushButton(parent=Dialog)
@@ -179,14 +159,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_differentreg.setObjectName("pushButton_differentreg")
         self.pushButton_preferences = QtWidgets.QPushButton(parent=Dialog)
@@ -202,14 +178,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_preferences.setObjectName("pushButton_preferences")
         self.pushButton_allapp = QtWidgets.QPushButton(parent=Dialog)
@@ -225,14 +197,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_allapp.setObjectName("pushButton_allapp")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
@@ -249,14 +217,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_exit.setObjectName("pushButton_exit")
         self.pushButton_mainmenu = QtWidgets.QPushButton(parent=Dialog)
@@ -273,14 +237,10 @@ class Ui_Dialog(object):
 "    padding: 8px; /* Küçük padding */\n"
 "    border: 2px solid black; /* İnce siyah çerçeve */\n"
 "    \n"
-"    /* Gölgelendirme eklemek için: */\n"
-"    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */\n"
 "}")
         self.pushButton_mainmenu.setObjectName("pushButton_mainmenu")
         self.tableWidget = QtWidgets.QTableWidget(parent=Dialog)

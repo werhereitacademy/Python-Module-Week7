@@ -68,14 +68,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -103,14 +99,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -168,14 +160,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -203,14 +191,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -238,14 +222,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -273,14 +253,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -308,14 +284,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -343,14 +315,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -381,14 +349,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
@@ -419,14 +383,10 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
 }</string>
    </property>
    <property name="text">
