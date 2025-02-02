@@ -10,6 +10,24 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -37,7 +55,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>640</x>
-     <y>190</y>
+     <y>210</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -57,14 +75,12 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
     /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
+
 }</string>
    </property>
    <property name="text">
@@ -75,7 +91,7 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>280</y>
+     <y>300</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -95,14 +111,12 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
     /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
+
 }</string>
    </property>
    <property name="text">
@@ -133,14 +147,12 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
     /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
+
 }</string>
    </property>
    <property name="text">
@@ -151,7 +163,7 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>540</x>
-     <y>280</y>
+     <y>300</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -171,14 +183,12 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
     /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
+
 }</string>
    </property>
    <property name="text">
@@ -189,7 +199,7 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>190</y>
+     <y>210</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -209,14 +219,12 @@ QPushButton {
     padding: 8px; /* Küçük padding */
     border: 2px solid black; /* İnce siyah çerçeve */
     
-    /* Gölgelendirme eklemek için: */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Gölgenin boyutu ve rengi */
 }
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
     /* Hover durumunda gölgeyi değiştirmek için */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Hover sırasında daha belirgin gölge */
+
 }</string>
    </property>
    <property name="text">
