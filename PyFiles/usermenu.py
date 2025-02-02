@@ -69,7 +69,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_interview.setObjectName("pushButton_interview")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_exit.setGeometry(QtCore.QRect(840, 480, 141, 71))
+        self.pushButton_exit.setGeometry(QtCore.QRect(840, 500, 141, 71))
         self.pushButton_exit.setAutoFillBackground(False)
         self.pushButton_exit.setStyleSheet("\n"
 "QPushButton {\n"
