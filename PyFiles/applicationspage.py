@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\Admin\Downloads\VIT_PROJE\VIT_HOMEWORKS\WEEK7\Python-Module-Week7_Team1\applicationspage.ui'
+# Form implementation generated from reading ui file 'applicationspage.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -13,6 +13,13 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1000, 600)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(Dialog.sizePolicy().hasHeightForWidth())
+        Dialog.setSizePolicy(sizePolicy)
+        Dialog.setMinimumSize(QtCore.QSize(1000, 600))
+        Dialog.setMaximumSize(QtCore.QSize(1000, 600))
         Dialog.setStyleSheet("background-color:rgb(177, 194, 158)")
         self.pushButton_search = QtWidgets.QPushButton(parent=Dialog)
         self.pushButton_search.setGeometry(QtCore.QRect(340, 205, 81, 45))
@@ -30,7 +37,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_search.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:\\Users\\Admin\\Downloads\\VIT_PROJE\\VIT_HOMEWORKS\\WEEK7\\Python-Module-Week7_Team1\\search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_search.setIcon(icon)
         self.pushButton_search.setObjectName("pushButton_search")
         self.pushButton_defined = QtWidgets.QPushButton(parent=Dialog)
@@ -50,6 +57,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_defined.setObjectName("pushButton_defined")
         self.pushButton_unidentified = QtWidgets.QPushButton(parent=Dialog)
@@ -69,6 +77,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_unidentified.setObjectName("pushButton_unidentified")
         self.lineEdit_search = QtWidgets.QLineEdit(parent=Dialog)
@@ -81,13 +90,13 @@ class Ui_Dialog(object):
 "    border: 4px solid #2c3e50;\n"
 "    border-radius: 15px;\n"
 "    padding: 10px;\n"
-"    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);\n"
 "}\n"
 "QLineEdit:placeholder {\n"
 "    color: rgba(150, 150, 150, 0.8);\n"
 "    font-style: italic;\n"
 "}\n"
 "")
+        self.lineEdit_search.setText("")
         self.lineEdit_search.setObjectName("lineEdit_search")
         self.pushButton_previous_control = QtWidgets.QPushButton(parent=Dialog)
         self.pushButton_previous_control.setGeometry(QtCore.QRect(290, 90, 260, 45))
@@ -106,6 +115,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_previous_control.setObjectName("pushButton_previous_control")
         self.pushButton_appfiltered = QtWidgets.QPushButton(parent=Dialog)
@@ -125,6 +135,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_appfiltered.setObjectName("pushButton_appfiltered")
         self.pushButton_dublicatereg = QtWidgets.QPushButton(parent=Dialog)
@@ -144,6 +155,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_dublicatereg.setObjectName("pushButton_dublicatereg")
         self.pushButton_differentreg = QtWidgets.QPushButton(parent=Dialog)
@@ -163,6 +175,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_differentreg.setObjectName("pushButton_differentreg")
         self.pushButton_preferences = QtWidgets.QPushButton(parent=Dialog)
@@ -182,6 +195,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_preferences.setObjectName("pushButton_preferences")
         self.pushButton_allapp = QtWidgets.QPushButton(parent=Dialog)
@@ -201,6 +215,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_allapp.setObjectName("pushButton_allapp")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
@@ -221,6 +236,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_exit.setObjectName("pushButton_exit")
         self.pushButton_mainmenu = QtWidgets.QPushButton(parent=Dialog)
@@ -241,6 +257,7 @@ class Ui_Dialog(object):
 "\n"
 "QPushButton:hover {\n"
 "    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_mainmenu.setObjectName("pushButton_mainmenu")
         self.tableWidget = QtWidgets.QTableWidget(parent=Dialog)
@@ -278,7 +295,7 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.pushButton_defined.setText(_translate("Dialog", "Definied Mentor Interviews"))
         self.pushButton_unidentified.setText(_translate("Dialog", "Unidentified Mentor Interviews"))
-        self.lineEdit_search.setText(_translate("Dialog", " Enter text to search!"))
+        self.lineEdit_search.setPlaceholderText(_translate("Dialog", " Enter text to search!"))
         self.pushButton_previous_control.setText(_translate("Dialog", "VIT Previous Control"))
         self.pushButton_appfiltered.setText(_translate("Dialog", "Application Filtered"))
         self.pushButton_dublicatereg.setText(_translate("Dialog", "Duplicate Registered"))
