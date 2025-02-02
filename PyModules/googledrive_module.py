@@ -8,17 +8,17 @@ import pandas as pd
 # Örnek: https://docs.google.com/spreadsheets/d/<SHEET_ID>/edit?usp=sharing
 # Bağlantıdaki <SHEET_ID> kısmını kullanacağız.
 
-# Google Sheets dosyasının ID'sini alın
-sheet_id = "SHEET_ID"  # Bağlantıdaki <SHEET_ID> kısmını buraya yazın
+def ReadGoogleSheet(sheet_id):
+    # CSV formatında verileri çekmek için URL oluşturun
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
 
-# CSV formatında verileri çekmek için URL oluşturun
-url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+    # Verileri pandas ile okuyun
+    df = pd.read_csv(url)
 
-# Verileri pandas ile okuyun
-df = pd.read_csv(url)
+    # Verileri ekrana yazdırın
+    #print(df)
 
-# Verileri ekrana yazdırın
-print(df)
+    return df
 
 # Açıklamalar:
 # sheet_id: Google Sheets dosyasının bağlantısındaki https://docs.google.com/spreadsheets/d/<SHEET_ID>/edit?usp=sharing kısmındaki <SHEET_ID> değerini kullanın.

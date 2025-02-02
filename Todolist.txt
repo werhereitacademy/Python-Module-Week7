@@ -1,0 +1,12 @@
+
+Mentorleriniz ile koordineli bir sekilde calisabilmek
+
+UML diagramlari yapmis olmak
+
+Programin .exe halinde calismasini saglamak
+
+Projeyi gununde sunuma hazirlamis olmak
+
+Github icerisinde Readme dosyasi ile saklamak
+
+Medium icin makale haline getirmis olmaniz beklenmektedir (opsiyonel)
