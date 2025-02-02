@@ -10,6 +10,24 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -72,6 +90,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -103,6 +122,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -127,7 +147,6 @@ QPushButton:hover {
     border: 4px solid #2c3e50;
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 QLineEdit:placeholder {
     color: rgba(150, 150, 150, 0.8);
@@ -136,6 +155,9 @@ QLineEdit:placeholder {
 </string>
    </property>
    <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
     <string> Enter text to search!</string>
    </property>
   </widget>
@@ -164,6 +186,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -195,6 +218,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -226,6 +250,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -257,6 +282,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -288,6 +314,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -319,6 +346,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -353,6 +381,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
@@ -387,6 +416,7 @@ QPushButton {
 
 QPushButton:hover {
     background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
 }</string>
    </property>
    <property name="text">
