@@ -317,7 +317,7 @@ QPushButton:hover {
       <bool>false</bool>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>120</number>
+      <number>161</number>
      </attribute>
      <attribute name="horizontalHeaderMinimumSectionSize">
       <number>54</number>
@@ -350,16 +350,6 @@ QPushButton:hover {
      <column>
       <property name="text">
        <string>Feedback</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string/>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string/>
       </property>
      </column>
     </widget>
