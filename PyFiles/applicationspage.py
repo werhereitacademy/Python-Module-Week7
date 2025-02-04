@@ -37,7 +37,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_search.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("./Images/search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_search.setIcon(icon)
         self.pushButton_search.setObjectName("pushButton_search")
         self.pushButton_defined = QtWidgets.QPushButton(parent=Dialog)
