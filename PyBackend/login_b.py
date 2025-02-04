@@ -48,8 +48,11 @@ class LoginWindow(QtWidgets.QDialog):
         
         self.close()  # Giriş ekranını kapat
 
-if __name__ == "__main__":
+def start_login_app():
     app = QtWidgets.QApplication(sys.argv)
     window = LoginWindow()
     window.show()
     sys.exit(app.exec())
+
+if __name__ == "__main__":
+    start_login_app()
