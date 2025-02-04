@@ -9,7 +9,7 @@ import io
 
 def download_xlsx_with_service_account(sheet_name,file_id='1mQ-afXga-_aZ8UOq2rOfJND96nrBa8C6'):
     # Service account key JSON dosyasının yolu
-    SERVICE_ACCOUNT_FILE = './asset/valued-door-449716-c2-66b51c2a0a47.json'
+    SERVICE_ACCOUNT_FILE = './asset/valued-door-449716-c2-33e9206abce8.json'
     
     # Drive API için gerekli izinler
     SCOPES = ['https://www.googleapis.com/auth/drive.readonly']

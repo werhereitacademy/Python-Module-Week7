@@ -3,10 +3,12 @@ import os
 from PyQt6 import QtWidgets,QtGui,QtWidgets
 # login.py'nin bulunduğu PyFiles klasörünü import yoluna ekleyelim
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../PyFiles")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../PyModules")))
 # login.py dosyasından Ui_Dialog sınıfını içe aktar
 from login import Ui_Dialog
 import pre_adminmenu_b  # Giriş admin ise yönlendirilecek sayfa
 import pre_usermenu_b   # Giriş user ise yönlendirilecek sayfa
+import googledrive_m    # Google Drive'dan veri indirme modülü
  
 
 class LoginWindow(QtWidgets.QDialog):
@@ -20,11 +22,13 @@ class LoginWindow(QtWidgets.QDialog):
         self.ui.pushButton_exit.clicked.connect(self.close)
 
         # Kullanıcı bilgilerini içeren sözlük
-        self.users = {
-            "ahmet": {"password": "werhere", "role": "admin"},
-            "mehmet": {"password": "itforever", "role": "user"},
-            "selim": {"password": "cyber_warrior", "role": "user"}
-        }
+        # self.users = {
+        #     "ahmet": {"password": "werhere", "role": "admin"},
+        #     "mehmet": {"password": "itforever", "role": "user"},
+        #     "selim": {"password": "cyber_warrior", "role": "user"}
+        # }
+
+        self.users = googledrive_m.download_xlsx_with_service_account(2)  # Google Drive'dan kullanıcı bilgilerini indir
 
     def check_login(self):
         username = self.ui.lineEdit_username.text()
