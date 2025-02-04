@@ -1,6 +1,6 @@
 import sys
 import os
-from PyQt6 import QtWidgets,QtGui
+from PyQt6 import QtWidgets,QtGui,QtWidgets
 # login.py'nin bulunduğu PyFiles klasörünü import yoluna ekleyelim
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../PyFiles")))
 # login.py dosyasından Ui_Dialog sınıfını içe aktar
