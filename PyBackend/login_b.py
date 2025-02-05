@@ -1,6 +1,6 @@
 import sys
 import os
-from PyQt6 import QtWidgets, QtGui
+from PyQt6 import QtWidgets
 
 # login.py'nin bulunduğu PyFiles klasörünü import yoluna ekleyelim
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../PyFiles")))
@@ -22,29 +22,34 @@ class LoginWindow(QtWidgets.QDialog):
         self.ui.pushButton_login.clicked.connect(self.check_login)
         self.ui.pushButton_exit.clicked.connect(self.close)
 
-
-        # Kullanıcı bilgilerini Google Drive'dan çekme
+        # Kullanıcı bilgilerini Google Drive'dan çekme (Liste formatında)
         self.users = self.load_users()
 
     def load_users(self):
-        """Google Drive'dan kullanıcıları indir ve sözlüğe dönüştür."""
+        """Google Drive'dan kullanıcıları indir ve liste formatında sakla."""
         try:
             users = googledrive_m.download_xlsx_with_service_account(2)
-            if isinstance(users, dict):  # Eğer veriler sözlük formatındaysa doğrudan döndür
+            print(users)
+
+            if isinstance(users, list) and all(isinstance(row, list) and len(row) >= 3 for row in users):
                 return users
             else:
                 QtWidgets.QMessageBox.critical(self, "Error", "User data format is incorrect!")
-                return {}
+                return []
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to load users: {e}")
-            return {}
+            return []
 
     def check_login(self):
+        """Kullanıcı giriş bilgilerini kontrol et."""
         username = self.ui.lineEdit_username.text().strip()
         password = self.ui.lineEdit_password.text().strip()
 
-        if username in self.users and self.users[username].get("password") == password:
-            role = self.users[username].get("role", "user")
+        # Kullanıcıyı listede ara
+        user_data = next((row for row in self.users if row[0] == username and row[1] == password), None)
+
+        if user_data:
+            role = user_data[2]  # Yetkiyi (role) al
             QtWidgets.QMessageBox.information(self, "Success", f"Login successful! Role: {role}")
             self.open_menu(role)
         else:
@@ -71,6 +76,7 @@ class LoginWindow(QtWidgets.QDialog):
 
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to open menu: {e}")
+
 
 def start_login_app():
     app = QtWidgets.QApplication(sys.argv)
