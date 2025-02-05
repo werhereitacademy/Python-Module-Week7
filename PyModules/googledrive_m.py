@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 import pandas as pd
 import io
 
-def download_xlsx_with_service_account(sheet_name,file_id='1mQ-afXga-_aZ8UOq2rOfJND96nrBa8C6'):
+def download_xlsx_with_service_account(sheet_name, file_id='1mQ-afXga-_aZ8UOq2rOfJND96nrBa8C6'):
     # Service account key JSON dosyasının yolu
     SERVICE_ACCOUNT_FILE = './asset/valued-door-449716-c2-39f522e83736.json'
     
@@ -27,18 +27,11 @@ def download_xlsx_with_service_account(sheet_name,file_id='1mQ-afXga-_aZ8UOq2rOf
         file_content = request.execute()
         
         # Dosyayı bellek içinde DataFrame'e çevirme
+        df = pd.read_excel(io.BytesIO(file_content), sheet_name=sheet_name)  # sheet_name parametresini kullandık
 
-        # Read a specific sheet by index (0-based)
-        df = pd.read_excel(io.BytesIO(file_content), sheet_name=0)
-        # Convert DataFrame to list of lists (excluding headers)
+        # DataFrame'i listeye çevirme (başlıklar hariç)
         data_list = df.values.tolist()
 
-        # If you want to include headers as the first row
-        #data_list_with_headers = [df.columns.tolist()] + df.values.tolist()
-
-        #print(data_list)  # Just the data rows
-        # or
-        #print(data_list_with_headers)  # Data rows with column headers as first row
         return data_list
     
     except Exception as e:
@@ -46,5 +39,5 @@ def download_xlsx_with_service_account(sheet_name,file_id='1mQ-afXga-_aZ8UOq2rOf
         return None
 
 # Kullanım
-# excellist = download_xlsx_with_service_account(1) #sheet index
-# print(excellist)
+excellist = download_xlsx_with_service_account(sheet_name=2)  # sheet index
+print(excellist)
