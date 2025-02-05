@@ -8,8 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../PyMo
 
 # login.py dosyasından Ui_Dialog sınıfını içe aktar
 from login import Ui_Dialog
-import pre_adminmenu_b  # Giriş admin ise yönlendirilecek sayfa
-import pre_usermenu_b   # Giriş user ise yönlendirilecek sayfa
+
 import googledrive_m    # Google Drive'dan veri indirme modülü
 
 
@@ -60,6 +59,7 @@ class LoginWindow(QtWidgets.QDialog):
         """Yetkiye göre uygun pencereyi açar."""
         try:
             if role == "admin":
+                import pre_adminmenu_b  # Giriş admin ise yönlendirilecek sayfa
                 if hasattr(pre_adminmenu_b, "AdminMenu"):
                     self.admin_menu = pre_adminmenu_b.AdminMenu()
                     self.admin_menu.show()
@@ -67,6 +67,7 @@ class LoginWindow(QtWidgets.QDialog):
                     QtWidgets.QMessageBox.critical(self, "Error", "Admin menu could not be loaded!")
 
             elif role == "user":
+                import pre_usermenu_b   # Giriş user ise yönlendirilecek sayfa
                 if hasattr(pre_usermenu_b, "UserMenu"):
                     self.user_menu = pre_usermenu_b.UserMenu()
                     self.user_menu.show()
@@ -78,11 +79,8 @@ class LoginWindow(QtWidgets.QDialog):
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to open menu: {e}")
 
-
-if __name__ == "__main__":
+def start_login_app():
     app = QtWidgets.QApplication(sys.argv)
     window = LoginWindow()
     window.show()
     sys.exit(app.exec())
-if __name__ == "__main__":
-    start_login_app()
