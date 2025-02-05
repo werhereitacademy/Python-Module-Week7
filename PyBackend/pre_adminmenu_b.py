@@ -11,6 +11,7 @@ from pre_adminmenu import Ui_Dialog
 
 # applicationspage_b.py dosyasını içe aktar
 from applicationspage_b import ApplicationsWindow  # ApplicationsWindow sınıfını çağıracağız
+from login_b import LoginWindow 
 
 class AdminMenu(QDialog):
     def __init__(self):

@@ -79,12 +79,8 @@ class LoginWindow(QtWidgets.QDialog):
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to open menu: {e}")
 
 
-def start_login_app():
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = LoginWindow()
     window.show()
     sys.exit(app.exec())
-
-
-if __name__ == "__main__":
-    start_login_app()
