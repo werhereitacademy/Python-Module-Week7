@@ -55,6 +55,7 @@ class LoginWindow(QtWidgets.QDialog):
         else:
             QtWidgets.QMessageBox.warning(self, "Error", "Invalid username or password!")
 
+
     def open_menu(self, role):
         """Yetkiye göre uygun pencereyi açar."""
         try:
