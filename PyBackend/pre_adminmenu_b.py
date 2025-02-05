@@ -9,10 +9,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "P
 # pre_adminmenu.py içindeki Ui_Dialog sınıfını içe aktar
 from pre_adminmenu import Ui_Dialog  
 
-# applicationspage_b.py dosyasını içe aktar
-from applicationspage_b import ApplicationsWindow  # ApplicationsWindow sınıfını çağıracağız
-from login_b import LoginWindow 
-
 class AdminMenu(QDialog):
     def __init__(self):
         super().__init__()
@@ -25,10 +21,12 @@ class AdminMenu(QDialog):
 
     def open_applications(self):
         """Applications penceresini açar"""
+        from applicationspage_b import ApplicationsWindow 
         self.applications_window = ApplicationsWindow()
         self.applications_window.show()
     def open_login(self):
         """Login penceresine geri döner"""
+        from login_b import LoginWindow 
         self.login_window = LoginWindow()
         self.login_window.show()
         self.close()  # Admin menüyü kapat

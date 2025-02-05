@@ -8,7 +8,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "P
 # pre_usermenu.py içindeki Ui_Dialog sınıfını içe aktar
 from pre_usermenu import Ui_Dialog  
 # applicationspage_b.py dosyasını içe aktar
-from applicationspage_b import ApplicationsWindow  # ApplicationsWindow sınıfını çağıracağız
 
 
 class UserMenu(QDialog):
@@ -24,6 +23,7 @@ class UserMenu(QDialog):
 
     def open_applications(self):
         """Applications penceresini açar"""
+        from applicationspage_b import ApplicationsWindow
         self.applications_window = ApplicationsWindow()
         self.applications_window.show()
     def open_login(self):

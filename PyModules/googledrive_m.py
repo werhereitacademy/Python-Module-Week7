@@ -39,5 +39,5 @@ def download_xlsx_with_service_account(sheet_name, file_id='1mQ-afXga-_aZ8UOq2rO
         return None
 
 # Kullanım
-excellist = download_xlsx_with_service_account(sheet_name=2)  # sheet index
-print(excellist)
+# excellist = download_xlsx_with_service_account(sheet_name=2)  # sheet index
+# print(excellist)
