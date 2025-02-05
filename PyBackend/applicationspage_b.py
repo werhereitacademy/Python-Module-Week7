@@ -1,20 +1,18 @@
-import sys
 import os
-from PyQt6 import QtWidgets
-
+from PyQt6.QtWidgets import QApplication, QDialog
+import sys
 # PyFiles klasörünü Python'un arama yoluna ekle
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "PyFiles")))
 
-# applicationspage.py içindeki Ui_Dialog sınıfını içe aktar
-from applicationspage import Ui_Dialog  
+from applicationspage import Ui_Dialog  # applicationspage.py dosyasını içe aktarıyoruz
 
-class ApplicationsWindow(QtWidgets.QDialog):
+class ApplicationsWindow(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
-        self.ui = Ui_Dialog()
-        self.ui.setupUi(self)  # Arayüzü bu pencereye yükle
+        self.setupUi(self)  # UI öğelerini oluştur
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
+    app = QApplication(sys.argv)
     window = ApplicationsWindow()
     window.show()
+    sys.exit(app.exec())
