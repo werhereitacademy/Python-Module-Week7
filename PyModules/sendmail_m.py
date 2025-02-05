@@ -2,32 +2,50 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-def send_gmail(sender_email, sender_password, receiver_email, subject, body):
-    # E-posta mesajını oluştur
-    message = MIMEMultipart()
-    message["From"] = sender_email
-    message["To"] = receiver_email
-    message["Subject"] = subject
+def send_gmail(recipient_email , subject, body):
+    """
+    Gmail üzerinden e-posta gönderen fonksiyon.
 
-    # Mesaj gövdesini ekle
-    message.attach(MIMEText(body, "plain"))
+    :param sender_email: Gönderenin Gmail adresi (örn: 'your_email@gmail.com')
+    :param sender_password: Gönderenin Gmail uygulama şifresi veya hesap şifresi
+    :param recipient_email: Alıcının e-posta adresi (örn: 'recipient@example.com')
+    :param subject: E-postanın konusu
+    :param body: E-postanın içeriği
+    :return: Başarılıysa True, hata oluşursa False döner.
+    """
 
+    sender_email=""
+    sender_password=""
+    
     try:
-        # Gmail SMTP sunucusuna bağlan
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()  # Güvenli bağlantı kur
-            server.login(sender_email, sender_password)  # Giriş yap
-            text = message.as_string()
-            server.sendmail(sender_email, receiver_email, text)  # E-postayı gönder
-        return ("E-posta başarıyla gönderildi!")
+        # E-posta oluşturma
+        msg = MIMEMultipart()
+        msg['From'] = sender_email
+        msg['To'] = recipient_email
+        msg['Subject'] = subject
+
+        # E-posta gövdesi
+        msg.attach(MIMEText(body, 'plain'))
+
+        # SMTP sunucusuna bağlanma ve e-posta gönderme
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()  # Güvenli bağlantı kur
+        server.login(sender_email, sender_password)
+        text = msg.as_string()
+        server.sendmail(sender_email, recipient_email, text)
+        server.quit()
+        print('E-posta başarıyla gönderildi!')
+        return True
     except Exception as e:
-        return (f"E-posta gönderilirken bir hata oluştu: {e}")
+        print(f'E-posta gönderilirken bir hata oluştu: {e}')
+        return False
 
-# Kullanım Örneği
-# sender_email = "your_email@gmail.com"  # Gönderici e-posta adresi
-# sender_password = "your_app_password"  # Uygulama şifresi veya hesap şifresi
-# receiver_email = "receiver_email@example.com"  # Alıcı e-posta adresi
-# subject = "Python ile Gmail'den E-posta Gönderme"
-# body = "Bu bir test e-postasıdır. Python ile Gmail üzerinden gönderildi."
+# # Örnek kullanım
+# sender_email = 'your_email@gmail.com'  # Gönderenin Gmail adresi
+# sender_password = 'your_app_password'  # Gönderenin uygulama şifresi
+# recipient_email = 'recipient@example.com'  # Alıcının e-posta adresi
+# subject = 'Python ile Gmail Gönderme'
+# body = 'Bu bir test e-postasıdır.'
 
-# send_gmail(sender_email, sender_password, receiver_email, subject, body)
+# # Fonksiyonu çağır
+# send_gmail(sender_email, sender_password, recipient_email, subject, body)
