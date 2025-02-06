@@ -19,10 +19,11 @@ class AdminMenu(QDialog):
         self.ui.pushButton_exit.clicked.connect(self.close)
 
     def open_applications(self):
-        """Applications penceresini açar"""
-        from applicationspage_b import ApplicationsWindow 
+        """Applications penceresini açar """
+        from applicationspage_b import ApplicationsWindow
         self.applications_window = ApplicationsWindow()
         self.applications_window.show()
+        self.close()  # Mevcut pencereyi kapat
       
 
 if __name__ == "__main__":
