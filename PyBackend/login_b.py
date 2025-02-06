@@ -54,30 +54,26 @@ class LoginWindow(QtWidgets.QDialog):
         else:
             QtWidgets.QMessageBox.warning(self, "Error", "Invalid username or password!")
 
-
     def open_menu(self, role):
         """Yetkiye göre uygun pencereyi açar."""
         try:
             if role == "admin":
                 import pre_adminmenu_b  # Giriş admin ise yönlendirilecek sayfa
-                if hasattr(pre_adminmenu_b, "AdminMenu"):
-                    self.admin_menu = pre_adminmenu_b.AdminMenu()
-                    self.admin_menu.show()
-                else:
-                    QtWidgets.QMessageBox.critical(self, "Error", "Admin menu could not be loaded!")
+                self.admin_menu = pre_adminmenu_b.AdminMenu()
+                self.admin_menu.show()
 
             elif role == "user":
                 import pre_usermenu_b   # Giriş user ise yönlendirilecek sayfa
-                if hasattr(pre_usermenu_b, "UserMenu"):
-                    self.user_menu = pre_usermenu_b.UserMenu()
-                    self.user_menu.show()
-                else:
-                    QtWidgets.QMessageBox.critical(self, "Error", "User menu could not be loaded!")
+                self.user_menu = pre_usermenu_b.UserMenu()
+                self.user_menu.show()
 
             self.close()  # Giriş ekranını kapat
 
+        except AttributeError:
+            QtWidgets.QMessageBox.critical(self, "Error", "Menu could not be loaded!")
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to open menu: {e}")
+
 
 def start_login_app():
     app = QtWidgets.QApplication(sys.argv)
