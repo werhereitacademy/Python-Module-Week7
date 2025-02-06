@@ -18,7 +18,6 @@ class UserMenu(QDialog):
 
         # applicationspage_b.py dosyasındaki pencereyi açacak butonu bağla
         self.ui.pushButton_applications.clicked.connect(self.open_applications)
-        self.ui.pushButton_mainmenu.clicked.connect(self.open_login)
         self.ui.pushButton_exit.clicked.connect(self.close)
 
     def open_applications(self):
@@ -26,11 +25,7 @@ class UserMenu(QDialog):
         from applicationspage_b import ApplicationsWindow
         self.applications_window = ApplicationsWindow()
         self.applications_window.show()
-    def open_login(self):
-        """Login penceresine geri döner"""
-        self.login_window = LoginWindow()
-        self.login_window.show()
-        self.close()  # Admin menüyü kapat    
+     
 
 if __name__ == "__main__":
     app = QApplication([])

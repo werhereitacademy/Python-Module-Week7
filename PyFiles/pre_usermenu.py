@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'usermenu.ui'
+# Form implementation generated from reading ui file 'pre_usermenu.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -47,7 +47,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_applications.setObjectName("pushButton_applications")
         self.pushButton_interview = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_interview.setGeometry(QtCore.QRect(200, 300, 251, 51))
+        self.pushButton_interview.setGeometry(QtCore.QRect(370, 330, 251, 51))
         self.pushButton_interview.setAutoFillBackground(False)
         self.pushButton_interview.setStyleSheet("\n"
 "QPushButton {\n"
@@ -69,7 +69,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_interview.setObjectName("pushButton_interview")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_exit.setGeometry(QtCore.QRect(840, 500, 141, 71))
+        self.pushButton_exit.setGeometry(QtCore.QRect(840, 520, 141, 61))
         self.pushButton_exit.setAutoFillBackground(False)
         self.pushButton_exit.setStyleSheet("\n"
 "QPushButton {\n"
@@ -90,28 +90,6 @@ class Ui_Dialog(object):
 "\n"
 "}")
         self.pushButton_exit.setObjectName("pushButton_exit")
-        self.pushButton_mainmenu = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_mainmenu.setGeometry(QtCore.QRect(540, 300, 251, 51))
-        self.pushButton_mainmenu.setAutoFillBackground(False)
-        self.pushButton_mainmenu.setStyleSheet("\n"
-"QPushButton {\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"    font-family: Arial;\n"
-"    color: black; /* Siyah yazı rengi */\n"
-"    background-color: #d3d3a1; /* Sarıya yakın gri arka plan rengi */\n"
-"    border-radius: 8px; /* Köşe yuvarlama */\n"
-"    padding: 8px; /* Küçük padding */\n"
-"    border: 2px solid black; /* İnce siyah çerçeve */\n"
-"    \n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"\n"
-"}")
-        self.pushButton_mainmenu.setObjectName("pushButton_mainmenu")
         self.pushButton_mentor = QtWidgets.QPushButton(parent=Dialog)
         self.pushButton_mentor.setGeometry(QtCore.QRect(100, 210, 251, 51))
         self.pushButton_mentor.setAutoFillBackground(False)
@@ -149,7 +127,6 @@ class Ui_Dialog(object):
         self.pushButton_applications.setText(_translate("Dialog", "APPLICATIONS"))
         self.pushButton_interview.setText(_translate("Dialog", "INTERVIEWS"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
-        self.pushButton_mainmenu.setText(_translate("Dialog", "MAIN MENU"))
         self.pushButton_mentor.setText(_translate("Dialog", "MENTOR INTERVIEW"))
 
 

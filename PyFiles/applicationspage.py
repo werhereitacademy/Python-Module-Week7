@@ -22,7 +22,7 @@ class Ui_Dialog(object):
         Dialog.setMaximumSize(QtCore.QSize(1000, 600))
         Dialog.setStyleSheet("background-color:rgb(177, 194, 158)")
         self.pushButton_search = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_search.setGeometry(QtCore.QRect(340, 205, 81, 45))
+        self.pushButton_search.setGeometry(QtCore.QRect(340, 205, 50, 45))
         self.pushButton_search.setStyleSheet("QPushButton{\n"
 "color:black;\n"
 "background:white;\n"
@@ -199,7 +199,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_preferences.setObjectName("pushButton_preferences")
         self.pushButton_allapp = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_allapp.setGeometry(QtCore.QRect(520, 205, 191, 45))
+        self.pushButton_allapp.setGeometry(QtCore.QRect(410, 205, 191, 45))
         self.pushButton_allapp.setStyleSheet("\n"
 "QPushButton {\n"
 "    font-size: 16px;\n"
@@ -239,27 +239,6 @@ class Ui_Dialog(object):
 "    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_exit.setObjectName("pushButton_exit")
-        self.pushButton_mainmenu = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_mainmenu.setGeometry(QtCore.QRect(720, 205, 131, 45))
-        self.pushButton_mainmenu.setAutoFillBackground(False)
-        self.pushButton_mainmenu.setStyleSheet("\n"
-"QPushButton {\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"    font-family: Arial;\n"
-"    color: black; /* Siyah yazı rengi */\n"
-"    background-color: #d3d3a1; /* Sarıya yakın gri arka plan rengi */\n"
-"    border-radius: 8px; /* Köşe yuvarlama */\n"
-"    padding: 8px; /* Küçük padding */\n"
-"    border: 2px solid black; /* İnce siyah çerçeve */\n"
-"    \n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"}")
-        self.pushButton_mainmenu.setObjectName("pushButton_mainmenu")
         self.tableWidget = QtWidgets.QTableWidget(parent=Dialog)
         self.tableWidget.setGeometry(QtCore.QRect(10, 260, 981, 331))
         self.tableWidget.setStyleSheet("background-color: rgb(170, 255, 255);\n"
@@ -303,7 +282,6 @@ class Ui_Dialog(object):
         self.pushButton_preferences.setText(_translate("Dialog", "Preferences"))
         self.pushButton_allapp.setText(_translate("Dialog", "All Applications"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
-        self.pushButton_mainmenu.setText(_translate("Dialog", "MAIN MENU"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "History"))
         item = self.tableWidget.horizontalHeaderItem(1)

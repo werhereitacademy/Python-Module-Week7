@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'adminmenu.ui'
+# Form implementation generated from reading ui file 'pre_adminmenu.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.0
 #
@@ -22,7 +22,7 @@ class Ui_Dialog(object):
         Dialog.setMaximumSize(QtCore.QSize(1000, 600))
         Dialog.setStyleSheet("background-color:rgb(177, 194, 158)")
         self.pushButton_adminmenu = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_adminmenu.setGeometry(QtCore.QRect(640, 200, 251, 51))
+        self.pushButton_adminmenu.setGeometry(QtCore.QRect(530, 210, 251, 51))
         self.pushButton_adminmenu.setAutoFillBackground(False)
         self.pushButton_adminmenu.setStyleSheet("\n"
 "QPushButton {\n"
@@ -43,7 +43,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_adminmenu.setObjectName("pushButton_adminmenu")
         self.pushButton_interview = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_interview.setGeometry(QtCore.QRect(200, 290, 251, 51))
+        self.pushButton_interview.setGeometry(QtCore.QRect(170, 360, 251, 51))
         self.pushButton_interview.setAutoFillBackground(False)
         self.pushButton_interview.setStyleSheet("\n"
 "QPushButton {\n"
@@ -64,7 +64,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_interview.setObjectName("pushButton_interview")
         self.pushButton_applications = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_applications.setGeometry(QtCore.QRect(370, 400, 251, 51))
+        self.pushButton_applications.setGeometry(QtCore.QRect(530, 360, 251, 51))
         self.pushButton_applications.setAutoFillBackground(False)
         self.pushButton_applications.setStyleSheet("\n"
 "QPushButton {\n"
@@ -84,29 +84,8 @@ class Ui_Dialog(object):
 "    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_applications.setObjectName("pushButton_applications")
-        self.pushButton_mainmenu = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_mainmenu.setGeometry(QtCore.QRect(540, 290, 251, 51))
-        self.pushButton_mainmenu.setAutoFillBackground(False)
-        self.pushButton_mainmenu.setStyleSheet("\n"
-"QPushButton {\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"    font-family: Arial;\n"
-"    color: black; /* Siyah yazı rengi */\n"
-"    background-color: #d3d3a1; /* Sarıya yakın gri arka plan rengi */\n"
-"    border-radius: 8px; /* Köşe yuvarlama */\n"
-"    padding: 8px; /* Küçük padding */\n"
-"    border: 2px solid black; /* İnce siyah çerçeve */\n"
-"    \n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
-"    /* Hover durumunda gölgeyi değiştirmek için */\n"
-"}")
-        self.pushButton_mainmenu.setObjectName("pushButton_mainmenu")
         self.pushButton_mentor = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_mentor.setGeometry(QtCore.QRect(100, 200, 251, 51))
+        self.pushButton_mentor.setGeometry(QtCore.QRect(170, 210, 251, 51))
         self.pushButton_mentor.setAutoFillBackground(False)
         self.pushButton_mentor.setStyleSheet("\n"
 "QPushButton {\n"
@@ -127,7 +106,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_mentor.setObjectName("pushButton_mentor")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_exit.setGeometry(QtCore.QRect(840, 500, 141, 71))
+        self.pushButton_exit.setGeometry(QtCore.QRect(840, 520, 141, 61))
         self.pushButton_exit.setAutoFillBackground(False)
         self.pushButton_exit.setStyleSheet("\n"
 "QPushButton {\n"
@@ -160,7 +139,6 @@ class Ui_Dialog(object):
         self.pushButton_adminmenu.setText(_translate("Dialog", "ADMIN MENU"))
         self.pushButton_interview.setText(_translate("Dialog", "INTERVIEWS"))
         self.pushButton_applications.setText(_translate("Dialog", "APPLICATIONS"))
-        self.pushButton_mainmenu.setText(_translate("Dialog", "MAIN MENU"))
         self.pushButton_mentor.setText(_translate("Dialog", "MENTOR INTERVIEW"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
         self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
