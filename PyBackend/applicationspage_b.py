@@ -20,10 +20,12 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
         self.populate_table()  # Tabloyu doldur
 
         # Butonların tıklama işlemleri
-        self.pushButton_exit.clicked.connect(self.close)
+       
         self.pushButton_dublicatereg.clicked.connect(self.show_duplicates)
         self.pushButton_appfiltered.clicked.connect(self.show_filtered)
-        self.pushButton_allapp.clicked.connect(self.show_all)  # Yeni butonun işlevi
+        self.pushButton_allapp.clicked.connect(self.show_all) 
+        self.pushButton_exit.clicked.connect(self.close)
+        self.pushButton_search.clicked.connect(self.search) 
 
     def load_users(self):
         """Google Drive'dan kullanıcıları indir ve liste formatında sakla."""
@@ -87,6 +89,23 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
     def show_all(self):
         """Tüm kullanıcı verilerini tekrar göster."""
         self.populate_table(self.users)  # Tüm veriyi tabloya ekle
+
+    def search(self):
+        """LineEdit'teki arama terimine göre isim ve soyisimlerde arama yap."""
+        search_term = self.lineEdit_search.text().strip().lower()  # Arama terimini al
+
+        if not search_term:
+            QtWidgets.QMessageBox.warning(self, "Warning", "Please enter a search term!")
+            return
+
+        # İsim ve soyisime göre arama yap
+        filtered_users = [user for user in self.users if search_term in user[1].lower() ]
+
+        if filtered_users:
+            self.populate_table(filtered_users)  # Arama sonucunu tabloya yansıt
+        else:
+            QtWidgets.QMessageBox.information(self, "No Results", "No users found matching the search term.")
+    
 
 
 if __name__ == "__main__":
