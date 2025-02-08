@@ -179,7 +179,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_differentreg.setObjectName("pushButton_differentreg")
         self.pushButton_preferences = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_preferences.setGeometry(QtCore.QRect(850, 90, 141, 91))
+        self.pushButton_preferences.setGeometry(QtCore.QRect(570, 205, 260, 45))
         self.pushButton_preferences.setStyleSheet("\n"
 "QPushButton {\n"
 "    font-size: 16px;\n"
@@ -199,7 +199,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_preferences.setObjectName("pushButton_preferences")
         self.pushButton_allapp = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_allapp.setGeometry(QtCore.QRect(410, 205, 191, 45))
+        self.pushButton_allapp.setGeometry(QtCore.QRect(850, 90, 141, 91))
         self.pushButton_allapp.setStyleSheet("\n"
 "QPushButton {\n"
 "    font-size: 16px;\n"
@@ -279,7 +279,7 @@ class Ui_Dialog(object):
         self.pushButton_appfiltered.setText(_translate("Dialog", "Application Filtered"))
         self.pushButton_dublicatereg.setText(_translate("Dialog", "Duplicate Registered"))
         self.pushButton_differentreg.setText(_translate("Dialog", "Different Registered "))
-        self.pushButton_preferences.setText(_translate("Dialog", "Preferences"))
+        self.pushButton_preferences.setText(_translate("Dialog", "Return to Preferences"))
         self.pushButton_allapp.setText(_translate("Dialog", "All Applications"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
         item = self.tableWidget.horizontalHeaderItem(0)

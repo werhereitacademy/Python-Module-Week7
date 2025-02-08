@@ -90,8 +90,8 @@ QPushButton:hover {
   <widget class="QPushButton" name="pushButton_interview">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>300</y>
+     <x>370</x>
+     <y>330</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -127,9 +127,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>480</y>
+     <y>520</y>
      <width>141</width>
-     <height>71</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -157,42 +157,6 @@ QPushButton:hover {
    </property>
    <property name="text">
     <string>EXIT</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_mainmenu">
-   <property name="geometry">
-    <rect>
-     <x>540</x>
-     <y>300</y>
-     <width>251</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-QPushButton {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: Arial;
-    color: black; /* Siyah yazı rengi */
-    background-color: #d3d3a1; /* Sarıya yakın gri arka plan rengi */
-    border-radius: 8px; /* Köşe yuvarlama */
-    padding: 8px; /* Küçük padding */
-    border: 2px solid black; /* İnce siyah çerçeve */
-    
-}
-
-QPushButton:hover {
-    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-
-}</string>
-   </property>
-   <property name="text">
-    <string>MAIN MENU</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_mentor">
