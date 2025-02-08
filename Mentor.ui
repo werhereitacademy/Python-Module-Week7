@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Mentor</class>
+ <widget class="QMainWindow" name="Mentor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>857</width>
+    <height>682</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonFollowStyle</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="GBox_Mentor">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>761</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>GroupBox_mentor</string>
+    </property>
+    <widget class="QPushButton" name="PB_Mentor_Find">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>80</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Find</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Mentor_Label">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>MENTOR MENU</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Mentor">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>150</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>   Appropriate to participate in the entire VIT project</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>   Appropriate to the first part of IT Education</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTextBrowser" name="TBrowser_Mentor_name_surname">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>80</y>
+       <width>351</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="Tabwidget_mentor_interviewdetails">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>220</y>
+       <width>641</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="movable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="Tab_mentor_int_date">
+      <attribute name="title">
+       <string>Interview date</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="Tab_mentor_name">
+      <attribute name="title">
+       <string>Name Surname</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="Tab_mentor_mentor">
+      <attribute name="title">
+       <string>Mentor</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="Tab_mentor_IT_knowledge">
+      <attribute name="title">
+       <string>IT Knowledge</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="Tab_mentor_intensity">
+      <attribute name="title">
+       <string>intensity</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="Tab_mentor_comments">
+      <attribute name="title">
+       <string>Comments</string>
+      </attribute>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="PB_mentor_preferences">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Preferences</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PB_mentor_exit">
+     <property name="geometry">
+      <rect>
+       <x>174</x>
+       <y>153</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Exit</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PB_mentor_all_interviews">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>83</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>All Interviews</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>857</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

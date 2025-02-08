@@ -1,0 +1,6 @@
+<RCC>
+	<qresource>
+		<file>./icons/WeRHere.png</file>
+		<file>./icons/WeRHere2.png</file>
+	</qresource>
+</RCC>
