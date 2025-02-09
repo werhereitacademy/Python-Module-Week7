@@ -20,12 +20,13 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
         self.populate_table()  # Tabloyu doldur
 
         # Butonların tıklama işlemleri
-       
         self.pushButton_dublicatereg.clicked.connect(self.show_duplicates)
         self.pushButton_appfiltered.clicked.connect(self.show_filtered)
-        self.pushButton_allapp.clicked.connect(self.show_all) 
+        self.pushButton_allapp.clicked.connect(self.show_all)
+        self.pushButton_search.clicked.connect(self.search)
+        self.pushButton_defined.clicked.connect(self.show_defined)  
+        self.pushButton_unidentified.clicked.connect(self.show_unidentified) 
         self.pushButton_exit.clicked.connect(self.close)
-        self.pushButton_search.clicked.connect(self.search) 
 
     def load_users(self):
         """Google Drive'dan kullanıcıları indir ve liste formatında sakla."""
@@ -33,10 +34,10 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
             users = googledrive_m.download_xlsx_with_service_account(1)
             print(users)
 
-            if isinstance(users, list) and all(isinstance(row, list) and len(row) >= 8 for row in users):
+            if isinstance(users, list) and all(isinstance(row, list) and len(row) >= 21 for row in users):
                 return users
             else:
-                QtWidgets.QMessageBox.critical(self, "Error", "User data format is incorrect!")
+                QtWidgets.QMessageBox.critical(self, "Error", "User data format is incorrect or missing columns!")
                 return []
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to load users: {e}")
@@ -65,11 +66,11 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
 
         # İsim ve mail adresine göre kullanıcıları grupla
         for user in self.users:
-            name, email = user[0], user[1]  # İlk iki alan isim ve mail olarak kabul ediyorum
+            name, email = user[1], user[2]  
             duplicates[(name, email)].append(user)
 
         # Tekrar eden kayıtları seç
-        duplicate_users = [users[0] for users in duplicates.values() if len(users) > 1]
+        duplicate_users = [users[1] for users in duplicates.values() if len(users) > 1]
 
         self.populate_table(duplicate_users)  # Tekrar eden kullanıcıları tabloya ekle
 
@@ -79,7 +80,7 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
         
         # İsim ve mail adresine göre kullanıcıları filtrele
         for user in self.users:
-            name, email = user[0], user[1]
+            name, email = user[1], user[2]
             if (name, email) not in unique_users:
                 unique_users[(name, email)] = user
 
@@ -98,14 +99,34 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
             QtWidgets.QMessageBox.warning(self, "Warning", "Please enter a search term!")
             return
 
-        # İsim ve soyisime göre arama yap
-        filtered_users = [user for user in self.users if search_term in user[1].lower() ]
+        # İsim-soyisime göre arama yap
+        filtered_users = [user for user in self.users if search_term in user[1].lower()]
 
         if filtered_users:
             self.populate_table(filtered_users)  # Arama sonucunu tabloya yansıt
         else:
             QtWidgets.QMessageBox.information(self, "No Results", "No users found matching the search term.")
-    
+
+
+    def show_defined(self):
+        """Google Drive'dan gelen verilerde 20. sütunda 'OK' yazanları filtrele."""
+
+        defined_users = [user for user in self.users if len(user) > 20 and str(user[20]).strip().upper() == "OK"]
+
+        if defined_users:
+            self.populate_table(defined_users)  # Mentor atanmışları tabloya ekle
+        else:
+            QtWidgets.QMessageBox.information(self, "No Results", "No users with mentor assigned found.")
+
+    def show_unidentified(self):
+        """Google Drive'dan gelen verilerde 20. sütunda 'ATANMADI' yazanları filtrele."""
+
+        unidentified_users = [user for user in self.users if len(user) > 20 and str(user[20]).strip().upper() == "ATANMADI"]
+
+        if unidentified_users:
+            self.populate_table(unidentified_users)  # Mentor atanmamışları tabloya ekle
+        else:
+            QtWidgets.QMessageBox.information(self, "No Results", "No users without mentor assignment found.")
 
 
 if __name__ == "__main__":

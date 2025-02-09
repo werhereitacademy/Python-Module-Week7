@@ -39,7 +39,7 @@
     <rect>
      <x>340</x>
      <y>205</y>
-     <width>81</width>
+     <width>50</width>
      <height>45</height>
     </rect>
    </property>
@@ -292,10 +292,10 @@ QPushButton:hover {
   <widget class="QPushButton" name="pushButton_preferences">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>90</y>
-     <width>141</width>
-     <height>91</height>
+     <x>570</x>
+     <y>205</y>
+     <width>260</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -318,16 +318,16 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Preferences</string>
+    <string>Return to Preferences</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_allapp">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>205</y>
-     <width>191</width>
-     <height>45</height>
+     <x>850</x>
+     <y>90</y>
+     <width>141</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -388,41 +388,6 @@ QPushButton:hover {
     <string>EXIT</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_mainmenu">
-   <property name="geometry">
-    <rect>
-     <x>720</x>
-     <y>205</y>
-     <width>131</width>
-     <height>45</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-QPushButton {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: Arial;
-    color: black; /* Siyah yazı rengi */
-    background-color: #d3d3a1; /* Sarıya yakın gri arka plan rengi */
-    border-radius: 8px; /* Köşe yuvarlama */
-    padding: 8px; /* Küçük padding */
-    border: 2px solid black; /* İnce siyah çerçeve */
-    
-}
-
-QPushButton:hover {
-    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-}</string>
-   </property>
-   <property name="text">
-    <string>MAIN MENU</string>
-   </property>
-  </widget>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
@@ -477,21 +442,26 @@ background-color: rgb(255, 243, 213);</string>
     </property>
    </column>
   </widget>
-  <widget class="QTextBrowser" name="textBrowser">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>20</y>
-     <width>651</width>
-     <height>51</height>
+     <y>10</y>
+     <width>431</width>
+     <height>61</height>
     </rect>
    </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;APPLICATIONS PAGE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   <property name="styleSheet">
+    <string notr="true">font: 87 24pt &quot;Arial Black&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+color: rgb(0, 100, 0);</string>
+   </property>
+   <property name="text">
+    <string>APPLICATIONS</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

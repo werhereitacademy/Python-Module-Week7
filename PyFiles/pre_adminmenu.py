@@ -22,7 +22,7 @@ class Ui_Dialog(object):
         Dialog.setMaximumSize(QtCore.QSize(1000, 600))
         Dialog.setStyleSheet("background-color:rgb(177, 194, 158)")
         self.pushButton_adminmenu = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_adminmenu.setGeometry(QtCore.QRect(530, 210, 251, 51))
+        self.pushButton_adminmenu.setGeometry(QtCore.QRect(550, 210, 251, 51))
         self.pushButton_adminmenu.setAutoFillBackground(False)
         self.pushButton_adminmenu.setStyleSheet("\n"
 "QPushButton {\n"
@@ -43,7 +43,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_adminmenu.setObjectName("pushButton_adminmenu")
         self.pushButton_interview = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_interview.setGeometry(QtCore.QRect(170, 360, 251, 51))
+        self.pushButton_interview.setGeometry(QtCore.QRect(190, 360, 251, 51))
         self.pushButton_interview.setAutoFillBackground(False)
         self.pushButton_interview.setStyleSheet("\n"
 "QPushButton {\n"
@@ -64,7 +64,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_interview.setObjectName("pushButton_interview")
         self.pushButton_applications = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_applications.setGeometry(QtCore.QRect(530, 360, 251, 51))
+        self.pushButton_applications.setGeometry(QtCore.QRect(550, 360, 251, 51))
         self.pushButton_applications.setAutoFillBackground(False)
         self.pushButton_applications.setStyleSheet("\n"
 "QPushButton {\n"
@@ -85,7 +85,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_applications.setObjectName("pushButton_applications")
         self.pushButton_mentor = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_mentor.setGeometry(QtCore.QRect(170, 210, 251, 51))
+        self.pushButton_mentor.setGeometry(QtCore.QRect(190, 210, 251, 51))
         self.pushButton_mentor.setAutoFillBackground(False)
         self.pushButton_mentor.setStyleSheet("\n"
 "QPushButton {\n"
@@ -126,9 +126,14 @@ class Ui_Dialog(object):
 "    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_exit.setObjectName("pushButton_exit")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Dialog)
-        self.textBrowser.setGeometry(QtCore.QRect(175, 50, 651, 51))
-        self.textBrowser.setObjectName("textBrowser")
+        self.label_5 = QtWidgets.QLabel(parent=Dialog)
+        self.label_5.setGeometry(QtCore.QRect(170, 60, 661, 61))
+        self.label_5.setStyleSheet("font: 87 24pt \"Arial Black\";\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"color: rgb(0, 100, 0);")
+        self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_5.setObjectName("label_5")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -141,11 +146,7 @@ class Ui_Dialog(object):
         self.pushButton_applications.setText(_translate("Dialog", "APPLICATIONS"))
         self.pushButton_mentor.setText(_translate("Dialog", "MENTOR INTERVIEW"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
-        self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt; font-weight:600;\">PREFERENCE -ADMIN MENU</span></p></body></html>"))
+        self.label_5.setText(_translate("Dialog", "PREFERENCE -ADMIN MENU"))
 
 
 if __name__ == "__main__":

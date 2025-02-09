@@ -34,23 +34,6 @@
   <property name="styleSheet">
    <string notr="true">background-color:rgb(177, 194, 158)</string>
   </property>
-  <widget class="QTextBrowser" name="textBrowser">
-   <property name="geometry">
-    <rect>
-     <x>175</x>
-     <y>50</y>
-     <width>651</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;PREFERENCE -USER MENU&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_applications">
    <property name="geometry">
     <rect>
@@ -90,8 +73,8 @@ QPushButton:hover {
   <widget class="QPushButton" name="pushButton_interview">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>300</y>
+     <x>370</x>
+     <y>330</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -127,9 +110,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>480</y>
+     <y>520</y>
      <width>141</width>
-     <height>71</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -157,42 +140,6 @@ QPushButton:hover {
    </property>
    <property name="text">
     <string>EXIT</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_mainmenu">
-   <property name="geometry">
-    <rect>
-     <x>540</x>
-     <y>300</y>
-     <width>251</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-QPushButton {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: Arial;
-    color: black; /* Siyah yazı rengi */
-    background-color: #d3d3a1; /* Sarıya yakın gri arka plan rengi */
-    border-radius: 8px; /* Köşe yuvarlama */
-    padding: 8px; /* Küçük padding */
-    border: 2px solid black; /* İnce siyah çerçeve */
-    
-}
-
-QPushButton:hover {
-    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
-    /* Hover durumunda gölgeyi değiştirmek için */
-
-}</string>
-   </property>
-   <property name="text">
-    <string>MAIN MENU</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_mentor">
@@ -229,6 +176,28 @@ QPushButton:hover {
    </property>
    <property name="text">
     <string>MENTOR INTERVIEW</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>50</y>
+     <width>641</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 24pt &quot;Arial Black&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+color: rgb(0, 100, 0);</string>
+   </property>
+   <property name="text">
+    <string>PREFERENCE -USER MENU</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

@@ -22,13 +22,14 @@ class Ui_Dialog(object):
         Dialog.setMaximumSize(QtCore.QSize(1000, 600))
         Dialog.setStyleSheet("background-color:rgb(177, 194, 158)")
         self.label_4 = QtWidgets.QLabel(parent=Dialog)
-        self.label_4.setGeometry(QtCore.QRect(100, 310, 341, 51))
+        self.label_4.setGeometry(QtCore.QRect(90, 367, 341, 51))
         self.label_4.setStyleSheet("font: 87 16pt \"Arial Black\";\n"
-"color: rgb(165, 55, 82);")
+"color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"")
         self.label_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_exit.setGeometry(QtCore.QRect(820, 500, 141, 71))
+        self.pushButton_exit.setGeometry(QtCore.QRect(820, 500, 141, 62))
         self.pushButton_exit.setAutoFillBackground(False)
         self.pushButton_exit.setStyleSheet("\n"
 "QPushButton {\n"
@@ -49,7 +50,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_exit.setObjectName("pushButton_exit")
         self.lineEdit_username = QtWidgets.QLineEdit(parent=Dialog)
-        self.lineEdit_username.setGeometry(QtCore.QRect(540, 150, 291, 55))
+        self.lineEdit_username.setGeometry(QtCore.QRect(560, 170, 291, 50))
         self.lineEdit_username.setStyleSheet("QLineEdit {\n"
 "    font-size: 18px;\n"
 "    font-family: Arial;\n"
@@ -66,7 +67,7 @@ class Ui_Dialog(object):
 "}")
         self.lineEdit_username.setObjectName("lineEdit_username")
         self.lineEdit_password = QtWidgets.QLineEdit(parent=Dialog)
-        self.lineEdit_password.setGeometry(QtCore.QRect(540, 260, 291, 55))
+        self.lineEdit_password.setGeometry(QtCore.QRect(560, 260, 291, 50))
         self.lineEdit_password.setStyleSheet("QLineEdit {\n"
 "    font-size: 18px;\n"
 "    font-family: Arial;\n"
@@ -85,15 +86,15 @@ class Ui_Dialog(object):
         self.lineEdit_password.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.lineEdit_password.setObjectName("lineEdit_password")
         self.label = QtWidgets.QLabel(parent=Dialog)
-        self.label.setGeometry(QtCore.QRect(540, 110, 191, 21))
+        self.label.setGeometry(QtCore.QRect(560, 140, 191, 21))
         self.label.setStyleSheet("font: 75 14pt \"MS Shell Dlg 2\";")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=Dialog)
-        self.label_2.setGeometry(QtCore.QRect(540, 220, 141, 21))
+        self.label_2.setGeometry(QtCore.QRect(560, 230, 141, 21))
         self.label_2.setStyleSheet("font: 75 14pt \"MS Shell Dlg 2\";")
         self.label_2.setObjectName("label_2")
         self.pushButton_login = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_login.setGeometry(QtCore.QRect(540, 370, 291, 71))
+        self.pushButton_login.setGeometry(QtCore.QRect(560, 350, 291, 62))
         self.pushButton_login.setStyleSheet("\n"
 "QPushButton {\n"
 "    font-size: 16px;\n"
@@ -112,9 +113,21 @@ class Ui_Dialog(object):
 "    /* Hover durumunda gölgeyi değiştirmek için */\n"
 "}")
         self.pushButton_login.setObjectName("pushButton_login")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Dialog)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 230, 381, 51))
-        self.textBrowser.setObjectName("textBrowser")
+        self.label_3 = QtWidgets.QLabel(parent=Dialog)
+        self.label_3.setGeometry(QtCore.QRect(46, 157, 441, 151))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("./Images/green_image.png"))
+        self.label_3.setScaledContents(False)
+        self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.label_5 = QtWidgets.QLabel(parent=Dialog)
+        self.label_5.setGeometry(QtCore.QRect(74, 300, 385, 65))
+        self.label_5.setStyleSheet("font: 87 24pt \"Arial Black\";\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"color: rgb(0, 100, 0);")
+        self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_5.setObjectName("label_5")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -127,11 +140,7 @@ class Ui_Dialog(object):
         self.label.setText(_translate("Dialog", "USERNAME"))
         self.label_2.setText(_translate("Dialog", "PASSWORD"))
         self.pushButton_login.setText(_translate("Dialog", "LOGIN"))
-        self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt; font-weight:600;\">CRM PROJECT</span></p></body></html>"))
+        self.label_5.setText(_translate("Dialog", "CRM PROJECT"))
 
 
 if __name__ == "__main__":
