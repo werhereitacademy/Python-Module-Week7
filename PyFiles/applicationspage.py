@@ -262,9 +262,24 @@ class Ui_Dialog(object):
         self.tableWidget.setHorizontalHeaderItem(6, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(7, item)
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Dialog)
-        self.textBrowser.setGeometry(QtCore.QRect(20, 20, 651, 51))
-        self.textBrowser.setObjectName("textBrowser")
+        header = self.tableWidget.horizontalHeader()
+        header.setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents)
+        header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents)
+        header.setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents)
+        header.setSectionResizeMode(3, QtWidgets.QHeaderView.ResizeMode.Fixed) 
+        header.setSectionResizeMode(4, QtWidgets.QHeaderView.ResizeMode.Fixed)  
+        header.setSectionResizeMode(5, QtWidgets.QHeaderView.ResizeMode.Fixed)  
+        header.setSectionResizeMode(6, QtWidgets.QHeaderView.ResizeMode.ResizeToContents) 
+        header.setSectionResizeMode(7, QtWidgets.QHeaderView.ResizeMode.ResizeToContents) 
+
+        self.label_5 = QtWidgets.QLabel(parent=Dialog)
+        self.label_5.setGeometry(QtCore.QRect(20, 10, 431, 61))
+        self.label_5.setStyleSheet("font: 87 24pt \"Arial Black\";\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"color: rgb(0, 100, 0);")
+        self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_5.setObjectName("label_5")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -298,11 +313,7 @@ class Ui_Dialog(object):
         item.setText(_translate("Dialog", "Current Status"))
         item = self.tableWidget.horizontalHeaderItem(7)
         item.setText(_translate("Dialog", "Economic Status"))
-        self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt; font-weight:600;\">APPLICATIONS PAGE</span></p></body></html>"))
+        self.label_5.setText(_translate("Dialog", "APPLICATIONS"))
 
 
 if __name__ == "__main__":
