@@ -8,9 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../PyMo
 
 # login.py dosyasından Ui_Dialog sınıfını içe aktar
 from login import Ui_Dialog
-
 import googledrive_m    # Google Drive'dan veri indirme modülü
-
 
 class LoginWindow(QtWidgets.QDialog):
     def __init__(self):
@@ -21,9 +19,9 @@ class LoginWindow(QtWidgets.QDialog):
         self.ui.pushButton_login.clicked.connect(self.check_login)
         self.ui.pushButton_exit.clicked.connect(self.close)
 
-        # Kullanıcı bilgilerini Google Drive'dan çekme (Liste formatında)
+        # Kullanıcı bilgilerini Google Drive'dan çekme
         self.users = self.load_users()
-        
+        self.current_role = None  # Kullanıcı rolünü saklamak için değişken
 
     def load_users(self):
         """Google Drive'dan kullanıcıları indir ve liste formatında sakla."""
@@ -49,8 +47,8 @@ class LoginWindow(QtWidgets.QDialog):
         user_data = next((row for row in self.users if row[0] == username and row[1] == password), None)
 
         if user_data:
-            role = user_data[2]  # Yetkiyi (role) al
-            self.open_menu(role)
+            self.current_role = user_data[2]  # Kullanıcı rolünü sakla
+            self.open_menu(self.current_role)
         else:
             QtWidgets.QMessageBox.warning(self, "Error", "Invalid username or password!")
 
@@ -58,22 +56,19 @@ class LoginWindow(QtWidgets.QDialog):
         """Yetkiye göre uygun pencereyi açar."""
         try:
             if role == "admin":
-                import pre_adminmenu_b  # Giriş admin ise yönlendirilecek sayfa
+                import pre_adminmenu_b  # Admin için
                 self.admin_menu = pre_adminmenu_b.AdminMenu()
                 self.admin_menu.show()
 
             elif role == "user":
-                import pre_usermenu_b   # Giriş user ise yönlendirilecek sayfa
+                import pre_usermenu_b   # User için
                 self.user_menu = pre_usermenu_b.UserMenu()
                 self.user_menu.show()
 
-            self.close()  # Giriş ekranını kapat
+            self.close()  # Login ekranını kapat
 
-        except AttributeError:
-            QtWidgets.QMessageBox.critical(self, "Error", "Menu could not be loaded!")
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Failed to open menu: {e}")
-
 
 def start_login_app():
     app = QtWidgets.QApplication(sys.argv)
