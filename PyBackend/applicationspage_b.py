@@ -29,6 +29,8 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
         self.pushButton_unidentified.clicked.connect(self.show_unidentified)
         self.pushButton_preferences.clicked.connect(self.go_to) 
         self.pushButton_exit.clicked.connect(self.close)
+        self.pushButton_differentreg.clicked.connect(self.show_different_vit)
+        self.pushButton_previous_control.clicked.connect(self.show_non_vit3)
 
     def load_users(self):
         """Google Drive'dan kullanıcıları indir ve liste formatında sakla."""
@@ -141,6 +143,28 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
             import pre_usermenu_b  
             self.user_menu = pre_usermenu_b.UserMenu()  # Kullanıcı menüsü nesnesi oluştur
             self.user_menu.show()
+
+    def show_different_vit(self):
+        """Sadece 'VIT3' olanları göster, ama içinde 'VIT1' veya 'VIT2' olanları çıkar."""
+        vit3_users = [user for user in self.users if len(user) > 20 and str(user[21]).strip().upper() == "VIT3"]  # 21. sütun (index 20)
+        
+
+        # 'VIT3' olanlar içinden 'VIT1' ve 'VIT2' içerenleri çıkart
+        filtered_users = []
+        for user in vit3_users:
+            vit_column = " ".join(map(str, user))  # Tüm sütunları string olarak birleştir
+            if "VIT1" not in vit_column and "VIT2" not in vit_column:
+                filtered_users.append(user)
+
+        print("Sadece 'VIT3' içerenler:", filtered_users)  # Debug için yazdır
+        self.populate_table(filtered_users)
+    def show_non_vit3(self):
+        """21. sütunda 'VIT3' dışında kalanları listele."""
+        non_vit3_users = [user for user in self.users if len(user) > 20 and str(user[21]) != "VIT3"]  # 21. sütun (index 20)
+
+        print("VIT3 olmayanlar:", non_vit3_users)  # Debug için yazdır
+        self.populate_table(non_vit3_users)    
+            
 
 
 
