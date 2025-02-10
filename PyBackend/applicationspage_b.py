@@ -13,11 +13,12 @@ import googledrive_m  # Google Drive'dan veri indirme modülü
 
 
 class ApplicationsWindow(QDialog, Ui_Dialog):
-    def __init__(self):
+    def __init__(self,role=None):
         super().__init__()
         self.setupUi(self)  # UI öğelerini oluştur
         self.users = self.load_users()  # Kullanıcı verilerini yükle
         self.populate_table()  # Tabloyu doldur
+        self.role = role  # Kullanıcının rolünü sakla
 
         # Butonların tıklama işlemleri
         self.pushButton_dublicatereg.clicked.connect(self.show_duplicates)
@@ -25,7 +26,8 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
         self.pushButton_allapp.clicked.connect(self.show_all)
         self.pushButton_search.clicked.connect(self.search)
         self.pushButton_defined.clicked.connect(self.show_defined)  
-        self.pushButton_unidentified.clicked.connect(self.show_unidentified) 
+        self.pushButton_unidentified.clicked.connect(self.show_unidentified)
+        self.pushButton_preferences.clicked.connect(self.go_to) 
         self.pushButton_exit.clicked.connect(self.close)
 
     def load_users(self):
@@ -127,6 +129,19 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
             self.populate_table(unidentified_users)  # Mentor atanmamışları tabloya ekle
         else:
             QtWidgets.QMessageBox.information(self, "No Results", "No users without mentor assignment found.")
+    
+    def go_to(self): 
+        self.close()  # Mevcut pencereyi kapat
+
+        if self.role == "admin":
+            import pre_adminmenu_b  
+            self.admin_menu = pre_adminmenu_b.AdminMenu()  # Admin pencere nesnesi oluştur
+            self.admin_menu.show()
+        else:
+            import pre_usermenu_b  
+            self.user_menu = pre_usermenu_b.UserMenu()  # Kullanıcı menüsü nesnesi oluştur
+            self.user_menu.show()
+
 
 
 if __name__ == "__main__":

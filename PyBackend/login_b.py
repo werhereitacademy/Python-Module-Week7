@@ -23,6 +23,7 @@ class LoginWindow(QtWidgets.QDialog):
 
         # Kullanıcı bilgilerini Google Drive'dan çekme (Liste formatında)
         self.users = self.load_users()
+        
 
     def load_users(self):
         """Google Drive'dan kullanıcıları indir ve liste formatında sakla."""
@@ -49,7 +50,6 @@ class LoginWindow(QtWidgets.QDialog):
 
         if user_data:
             role = user_data[2]  # Yetkiyi (role) al
-            QtWidgets.QMessageBox.information(self, "Success", f"Login successful! Role: {role}")
             self.open_menu(role)
         else:
             QtWidgets.QMessageBox.warning(self, "Error", "Invalid username or password!")
