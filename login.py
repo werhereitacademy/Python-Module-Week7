@@ -91,13 +91,13 @@ class UI_login(object):
 
         # Butona tıklama olayı bağlandı
         self.pushButton1login.clicked.connect(self.print_input_values)
-
+        self.pushButton_2exit.clicked.connect(MainWindow.close)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         # Kapatma butonu (X)
         self.close_button = QtWidgets.QPushButton(parent=self.frame)
         self.close_button.setGeometry(QtCore.QRect(620, 20, 30, 30))  # Sağ üst köşeye koy
-        self.close_button.setText("✖")  # Unicode X sembolü
+        self.close_button.setText("✖")  
         self.close_button.setStyleSheet(style.STYLES["QPushButton"])
         self.close_button.setObjectName("close_button")
         self.close_button.clicked.connect(MainWindow.close)
@@ -147,13 +147,12 @@ class UI_login(object):
                 self.main_window.close()  # Hata mesajını temizle
             self.window_manager = WindowManager()
             
-            if role=="admin":            
+                       
             # Login sayfasını kapat ve Deneme sayfasını aç
               # MainWindow'u kapat
-                self.window_manager.open_window("Pam",role=role)
+            self.window_manager.open_window("Pam",role=role)
 
-            else:
-                self.window_manager.open_window("Pm",role=role)
+            
 
   
 
