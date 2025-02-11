@@ -111,8 +111,8 @@ QPushButton:hover {
     <rect>
      <x>840</x>
      <y>520</y>
-     <width>141</width>
-     <height>61</height>
+     <width>135</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -198,6 +198,39 @@ color: rgb(0, 100, 0);</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_main">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>520</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
+    border-radius: 8px; /* Köşe yuvarlama */
+    padding: 8px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */
+    /* Hover durumunda gölgeyi değiştirmek için */
+
+}</string>
+   </property>
+   <property name="text">
+    <string>RETURN MAIN MENU</string>
    </property>
   </widget>
  </widget>

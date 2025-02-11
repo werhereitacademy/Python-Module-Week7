@@ -158,6 +158,7 @@ class ApplicationsWindow(QDialog, Ui_Dialog):
 
         print("Sadece 'VIT3' içerenler:", filtered_users)  # Debug için yazdır
         self.populate_table(filtered_users)
+    
     def show_non_vit3(self):
         """21. sütunda 'VIT3' dışında kalanları listele."""
         non_vit3_users = [user for user in self.users if len(user) > 20 and str(user[21]) != "VIT3"]  # 21. sütun (index 20)

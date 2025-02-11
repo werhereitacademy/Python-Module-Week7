@@ -17,12 +17,21 @@ class AdminMenu(QDialog):
 
         self.ui.pushButton_applications.clicked.connect(self.open_applications)
         self.ui.pushButton_exit.clicked.connect(self.close)
+        self.ui.pushButton_main.clicked.connect(self.go_to_login)
 
     def open_applications(self):
         """Applications penceresini açarken admin rolünü gönder"""
         self.applications_window = ApplicationsWindow("admin")
         self.applications_window.show()
         self.close()  # Mevcut pencereyi kapat
+    
+    def go_to_login(self):
+        """Ana menüye dön: Çıkış yap ve login ekranına yönlendir."""
+        self.close()  # Mevcut pencereyi kapat
+        from login_b import LoginWindow  
+        self.login_window = LoginWindow()  
+        self.login_window.show()
+             
 
 if __name__ == "__main__":
     app = QApplication([])

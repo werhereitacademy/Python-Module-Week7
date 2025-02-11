@@ -106,7 +106,7 @@ class Ui_Dialog(object):
 "}")
         self.pushButton_mentor.setObjectName("pushButton_mentor")
         self.pushButton_exit = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_exit.setGeometry(QtCore.QRect(840, 520, 141, 61))
+        self.pushButton_exit.setGeometry(QtCore.QRect(840, 520, 135, 51))
         self.pushButton_exit.setAutoFillBackground(False)
         self.pushButton_exit.setStyleSheet("\n"
 "QPushButton {\n"
@@ -134,6 +134,27 @@ class Ui_Dialog(object):
 "color: rgb(0, 100, 0);")
         self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_5.setObjectName("label_5")
+        self.pushButton_main = QtWidgets.QPushButton(parent=Dialog)
+        self.pushButton_main.setGeometry(QtCore.QRect(560, 520, 251, 51))
+        self.pushButton_main.setStyleSheet("\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    font-weight: bold;\n"
+"    font-family: Arial;\n"
+"    color: rgb(0, 85, 0);\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 8px; /* Köşe yuvarlama */\n"
+"    padding: 8px; /* Küçük padding */\n"
+"    border: 2px solid black; /* İnce siyah çerçeve */\n"
+"    \n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #b0b072; /* Hover durumunda daha koyu sarımsı gri */\n"
+"    /* Hover durumunda gölgeyi değiştirmek için */\n"
+"\n"
+"}")
+        self.pushButton_main.setObjectName("pushButton_main")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -147,6 +168,7 @@ class Ui_Dialog(object):
         self.pushButton_mentor.setText(_translate("Dialog", "MENTOR INTERVIEW"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
         self.label_5.setText(_translate("Dialog", "PREFERENCE -ADMIN MENU"))
+        self.pushButton_main.setText(_translate("Dialog", "RETURN MAIN MENU"))
 
 
 if __name__ == "__main__":
