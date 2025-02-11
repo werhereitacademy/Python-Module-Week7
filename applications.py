@@ -184,7 +184,11 @@ class Ui_Application_Menu(object):
 
         self.tableWidget_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)   
     def load(self):
-        self.df=read("Basvurular.xlsx")
+        
+        self.df = read("Basvurular.xlsx")
+        if self.df is None or self.df.empty:
+            print("Veri seti yüklenemedi veya boş.")  
+            self.df = pd.DataFrame()  # Boş DataFrame ile devam et
         
     def go_to(self):
         

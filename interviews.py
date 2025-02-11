@@ -170,14 +170,25 @@ class UI_Im(object):
         self.label3interviews.setText(_translate("MainWindow", "INTERVIEWS"))
     def load(self):
         self.df=read("Mulakatlar.xlsx")
-        load_data_to_table(self.tableWidget, self.df) 
+        if self.df is None or self.df.empty:
+            print("can not connect database")
+        else:
+            load_data_to_table(self.tableWidget, self.df) 
 
     def received(self):
-        load_data_to_table(self.tableWidget, self.df, filter_column=1, filter_na=True)  
+        if self.df is None or self.df.empty:
+            self.tableWidget.setRowCount(0)
+            QtWidgets.QMessageBox.warning(self.main_window, "Warning", "No received projects available.")
+        else:
+            load_data_to_table(self.tableWidget, self.df, filter_column=1, filter_na=True) 
         
 
     def submitted(self):
-        load_data_to_table(self.tableWidget, self.df, filter_column=2, filter_na=True)  
+        if self.df is None or self.df.empty:
+            self.tableWidget.setRowCount(0)
+            QtWidgets.QMessageBox.warning(self.main_window, "Warning", "No submitted projects available.")
+        else:
+            load_data_to_table(self.tableWidget, self.df, filter_column=2, filter_na=True)  
      
 
     def go_to(self):
@@ -194,7 +205,7 @@ class UI_Im(object):
 
     def search(self):
         search_text = self.lineEditaramabosluk.text().strip()  
-        print(search_text)
+        
         if not search_text:  
             self.load()
             return

@@ -123,6 +123,25 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        MainWindow.mousePressEvent = self.mousePressEvent
+        MainWindow.mouseMoveEvent = self.mouseMoveEvent
+        MainWindow.mouseReleaseEvent = self.mouseReleaseEvent
+        
+    def mousePressEvent(self, event):
+       
+        if event.button() == QtCore.Qt.MouseButton.LeftButton:
+            self.dragPos = event.globalPosition().toPoint()
+
+    def mouseMoveEvent(self, event):
+        
+        if self.dragPos is not None:
+            self.main_window.move(self.main_window.pos() + event.globalPosition().toPoint() - self.dragPos)
+            self.dragPos = event.globalPosition().toPoint()
+
+    def mouseReleaseEvent(self, event):
+        
+        self.dragPos = None
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))

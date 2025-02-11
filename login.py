@@ -136,9 +136,11 @@ class UI_login(object):
         password = self.lineEdit_2.text()
         
         is_authenticated, role =  authenticate_user(username, password)
-        print(is_authenticated)
-        if not is_authenticated:
+        
+        if is_authenticated==False and role==None:
             self.error_message.setText("Check the username or password")
+        elif is_authenticated==None and role==None:
+            self.error_message.setText("Database can not be loaded")
         else:
             
             print(f"Role is {role}")

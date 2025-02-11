@@ -168,6 +168,10 @@ class Ui_MainWindow(object):
     def SetupTable (self):
         file_path = "Evenement.xlsx" 
         df=read(file_path)
+        if df is None or df.empty:
+            QtWidgets.QMessageBox.warning(None, "Warning", "No events found or the file is empty!")
+            self.tableWidget.setRowCount(0)  # Tabloyu temizle
+            return
         self.tableWidget.setRowCount(len(df))  
         self.tableWidget.setColumnCount(len(df.columns)) 
         self.tableWidget.setHorizontalHeaderLabels(df.columns)  

@@ -3,6 +3,8 @@ from PyQt6 import QtWidgets, QtCore
 from backend.quickstart import download
 import sys
 
+
+
 class DownloadThread(QtCore.QThread):
     def run(self):
         download()  # İndirme işlemi arka planda çalışacak
