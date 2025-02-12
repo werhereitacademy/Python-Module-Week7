@@ -168,7 +168,7 @@ class Ui_Dialog(object):
         self.pushButton_mentor.setText(_translate("Dialog", "MENTOR INTERVIEW"))
         self.pushButton_exit.setText(_translate("Dialog", "EXIT"))
         self.label_5.setText(_translate("Dialog", "PREFERENCE -ADMIN MENU"))
-        self.pushButton_main.setText(_translate("Dialog", "RETURN MAIN MENU"))
+        self.pushButton_main.setText(_translate("Dialog", "RETURN TO MAIN MENU"))
 
 
 if __name__ == "__main__":
