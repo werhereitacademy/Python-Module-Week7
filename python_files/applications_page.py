@@ -1,11 +1,11 @@
 import sys
 import json
 import os
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QWidget, QPushButton, QTableWidget, \
-    QTableWidgetItem, QLineEdit, QFrame, QMenuBar, QStatusBar, QCompleter, QMessageBox
-from PyQt5.QtCore import QThread, pyqtSignal, Qt
-from PyQt5.QtGui import QIcon, QFont
-from adminmenu import AdminMenu
+from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QWidget, QPushButton, QTableWidget, QTableWidgetItem, QLineEdit, QFrame, QMenuBar, QStatusBar, QCompleter, QMessageBox
+from PyQt6.QtCore import QThread, pyqtSignal, Qt
+from PyQt6.QtGui import QIcon, QFont,QColor
+from PrefenceAdminMenu import Ui_Form_Admin
+from PrefenceMenu import Ui_Form as Ui_Form_User
 
 #############################################
 # DATA LOADING AND GOOGLE DRIVE FILE DOWNLOAD
@@ -15,8 +15,12 @@ class DataLoaderThread(QThread):
     data_loaded = pyqtSignal(dict)  # Emits a dictionary containing all JSON data
 
     def run(self):
+        self.basvurular = r"coverted_files/Basvurular.json"
+        self.kullanicilar = r"coverted_files/Kullanicilar.json"
+        self.Mentor = r"coverted_files/Mentor.json"
+        self.Mulakatlar = r"coverted_files/Mulakatlar.json"
         try:
-            json_files = ["coverted_files\Mentor.json", "coverted_files\Basvurular.json", "coverted_files\Mulakatlar.json", "coverted_files\Kullanicilar.json"]
+            json_files = [self.basvurular, self.kullanicilar, self.Mentor, self.Mulakatlar]
             self.json_data = {}
             for file_name in json_files:
                 if os.path.exists(file_name):
@@ -38,10 +42,15 @@ class DataLoaderThread(QThread):
 class ApplicationsPage(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.basvurular = "coverted_files/Basvurular.json"
+
+        # window = ApplicationsPage() bu satır kaldırıldı.
 
         # Create the main layout and central widget
         self.central_widget = QWidget(self)
         self.setCentralWidget(self.central_widget)
+
+        # Diğer sınıf içeriği burada kaldığı gibi kalmalı
 
         # Create a vertical layout for the main widget
         self.main_layout = QVBoxLayout(self.central_widget)
@@ -277,6 +286,9 @@ class ApplicationsPage(QMainWindow):
         self.data_loader.data_loaded.connect(self.populate_table)
         self.data_loader.start()
 
+
+    # Your class methods converted to PyQt6:
+
     def setup_connections(self):
         # Connect buttons to their respective functions
         self.search_button.clicked.connect(self.search_function)
@@ -291,7 +303,7 @@ class ApplicationsPage(QMainWindow):
 
     def populate_table(self, json_data):
         # Get the application data from "Basvurular.json"
-        self.all_data = json_data.get("coverted_files\Basvurular.json", [])
+        self.all_data = json_data.get(self.basvurular, [])
         print(f"Application data loaded, total records: {len(self.all_data)}")
         self.display_data(self.all_data)
 
@@ -320,6 +332,9 @@ class ApplicationsPage(QMainWindow):
             for col, (turkish_key, english_label) in enumerate(mapping.items()):
                 value = str(entry.get(turkish_key, ""))
                 item = QTableWidgetItem(value)
+                item.setToolTip(value)
+                item.setBackground(QColor(240, 240, 240))
+                item.setForeground(QColor("black"))
                 # Set the tooltip for each item in the table
                 item.setToolTip(value)  # Show the full content when hovered
                 self.applications_table.setItem(row, col, item)
@@ -327,7 +342,7 @@ class ApplicationsPage(QMainWindow):
     def setup_autocomplete(self):
         # Create a QCompleter for autocomplete based on the names list
         completer = QCompleter(self.names)
-        completer.setCaseSensitivity(Qt.CaseInsensitive)  # Make the search case-insensitive
+        completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)  # Make the search case-insensitive
         self.search_input.setCompleter(completer)
 
         # Connect the textChanged signal to update search results
@@ -355,17 +370,24 @@ class ApplicationsPage(QMainWindow):
     def show_all_data(self):
         print("Showing all applications.")
         self.display_data(self.all_data)
+    def jsonRole(self):
+        with open("role.json","r") as file:
+            data = json.load(file)
+        return data
 
     def return_to_preferences(self):
-        confirmation = QMessageBox.question(self, "Confirm",
-                                            "Are you sure you want to return to the preferences screen?",
-                                            QMessageBox.Yes | QMessageBox.No)
-        if confirmation == QMessageBox.Yes:
-            print("Returning to preferences screen.")
+        jsonData = self.jsonRole()
+        self.userWindow = QWidget()
+        if jsonData["login"] == "user":
+            self.user_ui = Ui_Form_User()
+        
+        else:
+            self.user_ui = Ui_Form_Admin()
 
-            self.admin_menu = AdminMenu()
-            self.admin_menu.show()
-            self.close()
+        self.user_ui.setupUi(self.userWindow)
+        
+        self.userWindow.show()
+        self.close()  # Mevcut pencereyi kapat
 
     def filter_by_mentor(self, has_mentor):
         # In the applications JSON, mentor assignment is stored under the key "Mentor gorusmesi".
@@ -391,16 +413,10 @@ class ApplicationsPage(QMainWindow):
             for entry in self.all_data}
         self.display_data(list(unique_data.values()))
 
-    import json
-    from PyQt5.QtWidgets import QMessageBox
-
-    import json
-    from PyQt5.QtWidgets import QMessageBox
-
     def filter_applications_function(self):
         try:
             # 'Basvurular.json' dosyasını yükleyelim
-            with open('coverted_files\Basvurular.json', 'r', encoding='utf-8') as f:
+            with open(self.basvurular, 'r', encoding='utf-8') as f:
                 all_entries = json.load(f)  # 'Basvurular.json' dosyasındaki veriyi al
 
             # Eğer dosyada hiç veri yoksa
@@ -417,7 +433,7 @@ class ApplicationsPage(QMainWindow):
             for entry in all_entries:
                 # Öncelikle Mail adresini kullan, yoksa Ad-Soyad kullan
                 identifier = (entry.get("Mail adresiniz") or entry.get("Adınız Soyadınız")).strip() if (
-                            entry.get("Mail adresiniz") or entry.get("Adınız Soyadınız")) else None
+                        entry.get("Mail adresiniz") or entry.get("Adınız Soyadınız")) else None
                 if identifier:  # Geçerli bir identifier var mı kontrol et
                     if identifier in identifier_counts:
                         identifier_counts[identifier] += 1
@@ -427,7 +443,7 @@ class ApplicationsPage(QMainWindow):
             # Duplicate kayıtları buluyoruz ve bunları dictionary'e ekliyoruz
             for entry in all_entries:
                 identifier = (entry.get("Mail adresiniz") or entry.get("Adınız Soyadınız")).strip() if (
-                            entry.get("Mail adresiniz") or entry.get("Adınız Soyadınız")) else None
+                        entry.get("Mail adresiniz") or entry.get("Adınız Soyadınız")) else None
                 if identifier and identifier_counts[identifier] > 1:
                     if identifier not in duplicate_entries:
                         # Kişiyi ve başvuru sayısını kaydedelim
@@ -439,7 +455,7 @@ class ApplicationsPage(QMainWindow):
                 return
 
             # MessageBox'a yazılacak mesajı hazırlayalım
-            duplicate_info = f"Found {len(duplicate_entries)} users with multiple submissions:\n\n"
+            duplicate_info = f"Found {len(duplicate_entries)} users with multiple submissions:/n/n"
 
             for identifier, entry in duplicate_entries.items():
                 name = entry.get("Adınız Soyadınız")
@@ -448,7 +464,7 @@ class ApplicationsPage(QMainWindow):
 
                 # None veya boş veri kontrolü yapalım
                 if name and email:  # Name ve email boş değilse
-                    duplicate_info += f"- {name} ({email}) submitted {repeat_count} times.\n"
+                    duplicate_info += f"- {name} ({email}) submitted {repeat_count} times./n"
 
             # None veya eksik değer olanları dışarıda bırakıyoruz
             if duplicate_info.strip():  # Eğer mesaj boş değilse
@@ -463,16 +479,29 @@ class ApplicationsPage(QMainWindow):
         except Exception as e:
             print(f"Error in filter_applications_function: {e}")
 
+
     def previous_vit_check_function(self):
         try:
-            # JSON verilerini kontrol et
+            # JSON dosyasını oku
+            file_path = "coverted_files/Basvurular.json"  # Dosyanın yolu
+            try:
+                with open(file_path, "r", encoding="utf-8") as file:
+                    self.all_data = json.load(file)  # JSON verisini yükle
+            except FileNotFoundError:
+                QMessageBox.critical(self, "Error", f"File '{file_path}' not found!")
+                return
+            except json.JSONDecodeError:
+                QMessageBox.critical(self, "Error", f"Invalid JSON format in '{file_path}'!")
+                return
+
+            # JSON verisi boş mu?
             if not self.all_data:
                 print("No JSON data loaded.")
                 QMessageBox.warning(self, "Warning", "No student records matching the filtered criteria were found!")
                 return
 
             # VIT3 harici kişileri bul
-            vit_data = [entry for entry in self.all_data if "VIT" not in str(entry.values())]
+            vit_data = [entry for entry in self.all_data if "VIT3" not in str(entry.values())]
 
             if not vit_data:  # Eğer hiç VIT3 harici kişi yoksa
                 QMessageBox.warning(self, "Warning", "No student records matching the filtered criteria were found!")
@@ -491,6 +520,6 @@ if __name__ == "__main__":
     window = ApplicationsPage()
     window.setWindowTitle("Applications")
     window.setWindowIcon(QIcon("app_icon.png"))
-    window.resize(1200, 800)
+    window.resize(800, 600)
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

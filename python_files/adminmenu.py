@@ -46,7 +46,7 @@ class AdminMenu(QMainWindow):
         self.back_button.clicked.connect(self.openFile)
 
     def roleJson(self):
-        with open("C:/Users/eren_/Desktop/CRM/python_files/role.json", "r") as file:
+        with open(r'python_files\role.json', "r") as file:
             data = json.load(file)
         return data
 

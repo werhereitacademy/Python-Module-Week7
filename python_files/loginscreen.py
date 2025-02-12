@@ -9,18 +9,19 @@ from PyQt6.QtGui import QFont
 
 
 
-
 # Global değişken tanımı
 current_user_role = None
 
 def load_users():
     """Kullanıcı bilgilerini JSON dosyasından okur."""
-    json_file_path = "C:/Users/eren_/Desktop/CRM/coverted_files/Kullanicilar.json"  # JSON dosyasının tam yolu
+    json_file_path = "C:/Users/eren_/Desktop/github_clone/Python-Module-Week7/coverted_files/Kullanicilar.json"  # JSON dosyasının tam yolu
     if not os.path.exists(json_file_path):
         return []  # Eğer dosya yoksa boş liste döndür
     
     with open(json_file_path, "r", encoding="utf-8") as file:
-        return json.load(file)  # JSON dosyasını liste olarak oku
+        data = json.load(file) 
+        return data
+
 
 def get_user_role(username, password):
     """
@@ -125,9 +126,10 @@ class LoginWindow(QMainWindow):
         # Kullanıcı rolünü belirleme
         global current_user_role
         current_user_role = get_user_role(username, password)
+        print(f"Girilen kullanıcı: {username}, parola: {password}")
 
         if current_user_role:
-            jsonPath = "C:/Users/eren_/Desktop/CRM/python_files/role.json"
+            jsonPath = "C:/Users/eren_/Desktop/github_clone/Python-Module-Week7/python_files/role.json"
             if current_user_role == "admin":
                 QMessageBox.information(self, "Success", "Welcome! You have logged in as Admin.")
                 self.redirect_to_admin()

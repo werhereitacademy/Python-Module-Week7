@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import QCompleter, QTableWidgetItem
 import json,sys
 from PrefenceAdminMenu import Ui_Form_Admin
 from PrefenceMenu import Ui_Form
-from loginscreen import LoginWindow
+
 
 
 class Ui_mentorInterviewsWindow(object):
@@ -119,13 +119,13 @@ class Ui_mentorInterviewsWindow(object):
 
 
     def jsonData(self):
-        jsonPath = 'C:/Users/eren_/Desktop/CRM/coverted_files/Mentor.json'
+        jsonPath = 'coverted_files/Mentor.json'
         with open(jsonPath, 'r', encoding='utf-8') as file:
             data = json.load(file)
         return data
     
     def roleJson(self):
-        jsonPath = "C:/Users/eren_/Desktop/CRM/python_files/role.json"
+        jsonPath = "role.json"
         with open(jsonPath, 'r', encoding="utf-8") as file:
             data = json.load(file)
         return data

@@ -11,7 +11,6 @@ import subprocess
 
 class Ui_Form_Admin(object):
     def setupUi(self, Form):
-        self.parent_widget = Form
         Form.setObjectName("Form")
         Form.setEnabled(True)
         Form.resize(670, 524)
@@ -22,19 +21,22 @@ class Ui_Form_Admin(object):
         self.gridLayout.addWidget(self.pushButton_Applications, 2, 1, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.gridLayout.addItem(spacerItem, 0, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.gridLayout.addItem(spacerItem1, 6, 1, 1, 1)
         self.pushButton_Interviews = QtWidgets.QPushButton(parent=Form)
         self.pushButton_Interviews.setObjectName("pushButton_Interviews")
         self.gridLayout.addWidget(self.pushButton_Interviews, 4, 1, 1, 1)
+        self.pushButton_Exit = QtWidgets.QPushButton(parent=Form)
+        self.pushButton_Exit.setEnabled(True)
+        self.pushButton_Exit.setObjectName("pushButton_Exit")
+        self.gridLayout.addWidget(self.pushButton_Exit, 6, 2, 1, 1)
         self.pushButton_Mentor_Meeting = QtWidgets.QPushButton(parent=Form)
         self.pushButton_Mentor_Meeting.setEnabled(True)
         self.pushButton_Mentor_Meeting.setObjectName("pushButton_Mentor_Meeting")
         self.gridLayout.addWidget(self.pushButton_Mentor_Meeting, 3, 1, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(parent=Form)
-        self.pushButton.setEnabled(True)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 5, 1, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.gridLayout.addItem(spacerItem1, 6, 1, 1, 1)
+        self.pushButton_Main_Menu = QtWidgets.QPushButton(parent=Form)
+        self.pushButton_Main_Menu.setObjectName("pushButton_Main_Menu")
+        self.gridLayout.addWidget(self.pushButton_Main_Menu, 6, 0, 1, 1)
         self.title = QtWidgets.QLabel(parent=Form)
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -46,10 +48,10 @@ class Ui_Form_Admin(object):
         self.title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.title.setObjectName("title")
         self.gridLayout.addWidget(self.title, 1, 0, 1, 3)
-        self.pushButton_Exit = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_Exit.setEnabled(True)
-        self.pushButton_Exit.setObjectName("pushButton_Exit")
-        self.gridLayout.addWidget(self.pushButton_Exit, 7, 1, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(parent=Form)
+        self.pushButton.setEnabled(True)
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout.addWidget(self.pushButton, 5, 1, 1, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -58,6 +60,7 @@ class Ui_Form_Admin(object):
         self.pushButton_Mentor_Meeting.clicked.connect(self.open_mentormeeting)
         self.pushButton_Interviews.clicked.connect(self.open_interviews)
         self.pushButton.clicked.connect(self.open_adminmenu)
+        self.pushButton_Main_Menu.clicked.connect(self.open_mainmenu)
         self.pushButton_Exit.clicked.connect(self.exit)
 
     def retranslateUi(self, Form):
@@ -65,33 +68,40 @@ class Ui_Form_Admin(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton_Applications.setText(_translate("Form", "APPLICATIONS"))
         self.pushButton_Interviews.setText(_translate("Form", "INTERWIEWS"))
-        self.pushButton_Mentor_Meeting.setText(_translate("Form", "MENTOR MEETING"))
-        self.pushButton.setText(_translate("Form", "ADMIN MENU"))
-        self.title.setText(_translate("Form", "PREFENCE ADMIN MENU"))
         self.pushButton_Exit.setText(_translate("Form", "EXIT"))
+        self.pushButton_Mentor_Meeting.setText(_translate("Form", "MENTOR MEETING"))
+        self.pushButton_Main_Menu.setText(_translate("Form", "MAIN MENU"))
+        self.title.setText(_translate("Form", "PREFENCE ADMIN MENU"))
+        self.pushButton.setText(_translate("Form", "ADMIN MENU"))
+
 
     def open_applications(self):
-        appPath = 'C:/Users/eren_/Desktop/CRM/python_files/applications_page.py'
+        appPath = r"python_files\applications_page.py"
         subprocess.Popen(["python", appPath])
-        self.parent_widget.close()
+        Form.close()
 
     def open_mentormeeting(self):
-        MentorPath = 'C:/Users/eren_/Desktop/CRM/python_files/mentor_interview.py'
+        MentorPath = 'python_files\mentor_interview.py'
         subprocess.Popen(["python", MentorPath])
-        self.parent_widget.close()
+        Form.close()
 
     def open_interviews(self):
-        interviewsPath = 'C:/Users/eren_/Desktop/CRM/python_files/interviews.py'
+        interviewsPath = 'python_files\interviews.py'
         subprocess.Popen(["python", interviewsPath])
-        self.parent_widget.close()
+        Form.close()
 
     def open_adminmenu(self):
-        adminPath = "C:/Users/eren_/Desktop/CRM/python_files/adminmenu.py"
+        adminPath = r"python_files\adminmenu.py"
         subprocess.Popen(["python", adminPath])
-        self.parent_widget.close()
+        Form.close()
+
+    def open_mainmenu(self):
+        loginPath = "python_files\loginscreen.py"
+        subprocess.Popen(["python", loginPath])
+        Form.close()
 
     def exit(self):
-        self.parent_widget.close()
+        Form.close()
 
 
 if __name__ == "__main__":

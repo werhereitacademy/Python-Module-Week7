@@ -159,7 +159,7 @@ class Ui_interviewsWindow(object):
         return data
     
     def roleJson(self):
-        jsonPath = "C:/Users/eren_/Desktop/CRM/python_files/role.json"
+        jsonPath = "role.json"
         with open(jsonPath, 'r', encoding="utf-8") as file:
             data = json.load(file)
         return data
