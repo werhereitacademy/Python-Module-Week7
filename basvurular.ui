@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_search">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 16pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>SEARCH</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_assigned">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>160</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Assigned Mentor Meetings </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_unassigned">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Unassigned Mentor Meetings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_previous_vit">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>280</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Previous VIT Check</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_duplicate">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>340</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Duplicate Records</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_unique">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>400</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Unique Records </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_filter">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>460</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Filter Applications</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_prefences">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>100</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Return to Preferences Screen</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>100</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_all_app">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 20pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 1px; /* Köşe yuvarlama */
+    padding: 1px; /* Küçük padding */
+    border: 2px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>All Applications</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_basvurular">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>160</y>
+      <width>481</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>19</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>63</number>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>19</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>30</number>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Date</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Full Name</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Phone</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Posta Code</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>State</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Current Status</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Economic Status</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

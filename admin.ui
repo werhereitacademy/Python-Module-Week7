@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow_admin</class>
+ <widget class="QMainWindow" name="MainWindow_admin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(235, 235, 235);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_EVENT_CONTROL">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>270</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 14pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 2px; /* Köşe yuvarlama */
+    padding: 8px; /* Küçük padding */
+    border: 1px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>EVENT CONTROL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_PREFENCES_ADMIN">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>230</y>
+      <width>270</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 14pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 2px; /* Köşe yuvarlama */
+    padding: 8px; /* Küçük padding */
+    border: 1px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>PREFENCES - ADMIN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_SEND_MAIL">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>130</y>
+      <width>270</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 14pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 2px; /* Köşe yuvarlama */
+    padding: 8px; /* Küçük padding */
+    border: 1px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>SEND MAIL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_EXIT">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>230</y>
+      <width>270</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 14pt &quot;Symbol&quot;;
+    color: black; /* Siyah yazı rengi */
+    background: rgba(0, 84, 147, 128);
+    border-radius: 2px; /* Köşe yuvarlama */
+    padding: 8px; /* Küçük padding */
+    border: 1px solid black; /* İnce siyah çerçeve */
+    
+}
+
+QPushButton:hover {
+    background-color: rgba(145, 145, 145); 
+    /* Hover durumunda gölgeyi değiştirmek için */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>320</y>
+      <width>641</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>20</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>150</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>EVENT NAME</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>STARTING TIME</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>USER E-MAIL</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>OWNER E-MAIL</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>20</y>
+      <width>291</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 28pt &quot;Symbol&quot;;</string>
+     </property>
+     <property name="text">
+      <string>ADMIN MENU</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>51</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>foto1.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
