@@ -153,7 +153,7 @@ class Ui_interviewsWindow(object):
         self.pushButton_prefence.clicked.connect(self.preference)
 
     def jsonData(self):
-        jsonPath = 'coverted_files\Mulakatlar.json'
+        jsonPath = r'coverted_files\Mulakatlar.json'
         with open(jsonPath, 'r', encoding='utf-8') as file:
             data = json.load(file)
         return data

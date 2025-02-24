@@ -42,7 +42,7 @@ class DataLoaderThread(QThread):
 class ApplicationsPage(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.basvurular = "coverted_files/Basvurular.json"
+        self.basvurular = r"coverted_files/Basvurular.json"
 
         # window = ApplicationsPage() bu satır kaldırıldı.
 
@@ -483,7 +483,7 @@ class ApplicationsPage(QMainWindow):
     def previous_vit_check_function(self):
         try:
             # JSON dosyasını oku
-            file_path = "coverted_files/Basvurular.json"  # Dosyanın yolu
+            file_path = r"coverted_files/Basvurular.json"  # Dosyanın yolu
             try:
                 with open(file_path, "r", encoding="utf-8") as file:
                     self.all_data = json.load(file)  # JSON verisini yükle

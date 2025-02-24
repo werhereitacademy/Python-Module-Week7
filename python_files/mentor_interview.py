@@ -119,7 +119,7 @@ class Ui_mentorInterviewsWindow(object):
 
 
     def jsonData(self):
-        jsonPath = 'coverted_files/Mentor.json'
+        jsonPath = r'coverted_files/Mentor.json'
         with open(jsonPath, 'r', encoding='utf-8') as file:
             data = json.load(file)
         return data

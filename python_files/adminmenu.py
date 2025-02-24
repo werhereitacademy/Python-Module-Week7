@@ -52,7 +52,7 @@ class AdminMenu(QMainWindow):
 
     def load_events(self):
         """'events.json' file loads event data and populates the table."""
-        json_file_path = "python_files\events.json"  # Path to your events.json file in the project directory
+        json_file_path = r"python_files\events.json"  # Path to your events.json file in the project directory
         if not os.path.exists(json_file_path):
             QMessageBox.warning(self, "Error", f"{json_file_path} file not found!")
             return

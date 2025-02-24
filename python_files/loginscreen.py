@@ -14,7 +14,7 @@ current_user_role = None
 
 def load_users():
     """Kullanıcı bilgilerini JSON dosyasından okur."""
-    json_file_path = "C:/Users/eren_/Desktop/github_clone/Python-Module-Week7/coverted_files/Kullanicilar.json"  # JSON dosyasının tam yolu
+    json_file_path = r"coverted_files\Kullanicilar.json"  # JSON dosyasının tam yolu
     if not os.path.exists(json_file_path):
         return []  # Eğer dosya yoksa boş liste döndür
     
@@ -129,7 +129,7 @@ class LoginWindow(QMainWindow):
         print(f"Girilen kullanıcı: {username}, parola: {password}")
 
         if current_user_role:
-            jsonPath = "C:/Users/eren_/Desktop/github_clone/Python-Module-Week7/python_files/role.json"
+            jsonPath = r"python_files\role.json"
             if current_user_role == "admin":
                 QMessageBox.information(self, "Success", "Welcome! You have logged in as Admin.")
                 self.redirect_to_admin()

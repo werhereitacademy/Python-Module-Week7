@@ -74,17 +74,17 @@ class Ui_Form(object):
         Form.close()
 
     def open_mentormeeting(self):
-        MentorPath = 'python_files\mentor_interview.py'
+        MentorPath = r'python_files\mentor_interview.py'
         subprocess.Popen(["python", MentorPath])
         Form.close()
 
     def open_interviews(self):
-        interviewsPath = 'python_files\interviews.py'
+        interviewsPath = r'python_files\interviews.py'
         subprocess.Popen(["python", interviewsPath])
         Form.close()
 
     def open_mainmenu(self):
-        loginPath = "python_files\loginscreen.py"
+        loginPath = r"python_files\loginscreen.py"
         subprocess.Popen(["python", loginPath])
         Form.close()
 
