@@ -1,5 +1,2 @@
 python_files/credentials.json
 python_files/token.json
-.env
-*.log
-__pycache__/

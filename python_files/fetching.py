@@ -7,8 +7,8 @@ import pandas as pd
 
 
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
-CLIENT_SECRETS_FILE = 'C:/Users/eren_/Desktop/CRM/python_files/credentials.json'
-TOKEN_FILE = 'token.json'
+CLIENT_SECRETS_FILE = r'python_files\credentials.json'
+TOKEN_FILE = r'python_files\token.json'
 
 
 if os.path.exists(TOKEN_FILE):
@@ -45,31 +45,13 @@ for file in files:
     fh.seek(0)
 
 
-    df = pd.read_excel(fh, header=None)  
-
-    
-    print(f"{file_name} için algılanan sütun sayısı: {len(df.columns)}")
-    print("İlk 5 satır:")
-    print(df.head())
-
-   
     expected_columns = ["Tarih", "Donem", "Aday Ismi", "Mentor", "Degerlendirme", "Dil Seviyesi"]
-
-   
-    if len(df.columns) == len(expected_columns):
+    if file_name == "mentor.xlsx":
+        df = pd.read_excel(fh, header=None)  # Başlıksız oku
         df.columns = expected_columns
     else:
-        print(f"{file_name} dosyasında sütun sayısı uyuşmuyor. Otomatik düzenleniyor...")
-        missing_columns = len(expected_columns) - len(df.columns)
-        if missing_columns > 0:
-            for i in range(missing_columns):
-                df[f"Extra_Column_{i+1}"] = None 
-        elif missing_columns < 0:
-            df = df.iloc[:, :len(expected_columns)]  
-
-        df.columns = expected_columns
-
-    
+        df = pd.read_excel(fh, header=0)    # Diğer dosyalar için başlıkları oku
+  
     json_data = df.to_json(orient='records', lines=False, force_ascii=False)
 
     

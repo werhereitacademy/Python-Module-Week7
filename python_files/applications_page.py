@@ -371,7 +371,7 @@ class ApplicationsPage(QMainWindow):
         print("Showing all applications.")
         self.display_data(self.all_data)
     def jsonRole(self):
-        with open("role.json","r") as file:
+        with open(r"python_files\role.json","r") as file:
             data = json.load(file)
         return data
 

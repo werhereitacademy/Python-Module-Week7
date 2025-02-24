@@ -125,7 +125,7 @@ class Ui_mentorInterviewsWindow(object):
         return data
     
     def roleJson(self):
-        jsonPath = "role.json"
+        jsonPath = r"python_files\role.json"
         with open(jsonPath, 'r', encoding="utf-8") as file:
             data = json.load(file)
         return data
