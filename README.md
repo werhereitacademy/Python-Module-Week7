@@ -1,6 +1,6 @@
 ## Python-Module-Week7
 
-* In this assignment, you are expected to complete the interface of the Python module graduation project on the page https://werhere-it-academy.gitbook.io/werhere-it-academy-handbook/python-modulu/modul-project/crm.v2 with an original work.
+* In this assignment, you are expected to complete the interface of the Python module graduation project on the page [https://werhere-it-academy.gitbook.io/werhere-it-academy-handbook/python-modulu/modul-project/crm.v2](https://werhere-it-academy.gitbook.io/werhere-it-academy-handbook/it-fundamentals-eng/python-module/modul-project/crm)  with an original work.
 
 ## Interface login window
 * Create a customized login page for the application. This page contains the following features
