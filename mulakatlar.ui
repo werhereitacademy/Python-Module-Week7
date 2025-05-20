@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="lineEdit_search">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>89</y>
+      <width>561</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_submitted">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>149</y>
+      <width>235</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 84, 147, 128);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>PROJECT SUBMITTED THOSE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_baslik">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(240, 240, 240);</string>
+    </property>
+    <property name="text">
+     <string>INTERVIEWS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>490</y>
+      <width>681</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 84, 147, 128);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_mulakat_search">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>89</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 84, 147, 128);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>SEARCH</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_received">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>149</y>
+      <width>230</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 84, 147, 128);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>PROJECT RECEIVED THOSE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_preferences">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>149</y>
+      <width>191</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Symbol</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 84, 147, 128);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>PREFERENCES</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_mulakat">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>210</y>
+      <width>681</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>220</number>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Ad Soyad</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Symbol</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Proje Gonderilis Tarihi</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Symbol</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Proje Gelis Tarihi</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Symbol</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>37</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

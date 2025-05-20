@@ -1,0 +1,32 @@
+[
+    {
+        "kullanici":"ahmet",
+        "parola":"werhere",
+        "yetki":"admin"
+    },
+    {
+        "kullanici":"mehmet",
+        "parola":"itforever",
+        "yetki":"user"
+    },
+    {
+        "kullanici":"selim",
+        "parola":"cyber_warrior",
+        "yetki":"user"
+    },
+    {
+        "kullanici":"a",
+        "parola":"b",
+        "yetki":"admin"
+    },
+    {
+        "kullanici":"s",
+        "parola":"d",
+        "yetki":"user"
+    },
+    {
+        "kullanici":"q",
+        "parola":"w",
+        "yetki":"admin"
+    }
+]
